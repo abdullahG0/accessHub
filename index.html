@@ -1,0 +1,191 @@
+x<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccessHub Scotland – Inclusive Education for All</title>
+    <meta name="description" content="Supporting disabled students in Scottish universities with DSA funding, reasonable adjustments, and full campus accessibility under the Equality Act 2010.">
+
+    <style>
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Segoe UI', Arial, sans-serif; line-height:1.7; color:#333; background:#f8f9fc; }
+        img { max-width:100%; border-radius:12px; display:block; }
+        a { color:#0065bd; text-decoration:none; }
+        a:hover { text-decoration:underline; }
+
+        /* Header */
+        header {
+            background:#003087; color:#fff; position:sticky; top:0; z-index:1000;
+            box-shadow:0 4px 20px rgba(0,0,0,0.15);
+        }
+        nav {
+            max-width:1400px; margin:0 auto; padding:1.2rem 2rem;
+            display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;
+        }
+        .logo { font-size:2.4rem; font-weight:900; letter-spacing:1.2px; }
+        .nav-links { display:flex; gap:3rem; list-style:none; }
+        .nav-links a { color:#fff; font-weight:600; font-size:1.15rem; }
+        .nav-links a:hover { color:#a8d0ff; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0,40,135,0.78), rgba(0,20,90,0.88)),
+                        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            color:#fff; text-align:center; padding:11rem 2rem 9rem;
+        }
+        .hero h1 { font-size:4.2rem; margin-bottom:1rem; text-shadow:0 4px 15px rgba(0,0,0,0.6); }
+        .hero p { font-size:1.5rem; max-width:1000px; margin:0 auto 2.5rem; }
+        .btn {
+            display:inline-block; background:#00a3e0; color:#fff; padding:1.3rem 3rem;
+            border-radius:50px; font-size:1.3rem; font-weight:bold; box-shadow:0 8px 25px rgba(0,163,224,0.5);
+        }
+        .btn:hover { background:#0088c4; transform:translateY(-4px); }
+
+        /* Sections */
+        .container { max-width:1400px; margin:5rem auto; padding:0 2rem; }
+        h2 { font-size:2.6rem; color:#003087; text-align:center; margin:4rem 0 2.5rem; }
+        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(340px,1fr)); gap:3rem; }
+        .card {
+            background:#fff; padding:2.8rem; border-radius:16px; text-align:center;
+            box-shadow:0 12px 35px rgba(0,0,0,0.1); border-left:7px solid #0065bd;
+            transition:0.4s;
+        }
+        .card:hover { transform:translateY(-12px); }
+        .card img { width:90px; height:90px; margin:0 auto 1.5rem; }
+
+        .highlight-box {
+            background:linear-gradient(135deg, #e6f0ff, #f0f8ff); padding:3rem; border-radius:20px;
+            text-align:center; margin:5rem 0; border:2px solid #0065bd;
+        }
+        .stats { display:flex; justify-content:center; gap:4rem; flex-wrap:wrap; margin:4rem 0; }
+        .stat { text-align:center; }
+        .stat strong { font-size:3rem; color:#0065bd; display:block; }
+
+        .testimonials { background:#f0f8ff; padding:5rem 2rem; border-radius:20px; margin:6rem 0; }
+        .testimonial-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:2.5rem; }
+        .testimonial {
+            background:#fff; padding:2.5rem; border-radius:14px; font-style:italic;
+            box-shadow:0 8px 25px rgba(0,0,0,0.08);
+        }
+        .testimonial cite { display:block; margin-top:1.5rem; font-weight:bold; font-style:normal; color:#0065bd; }
+
+        footer {
+            background:#001f5b; color:#ddd; text-align:center; padding:5rem 2rem;
+        }
+        footer a { color:#a8d0ff; }
+
+        @media (max-width:768px) {
+            .hero h1 { font-size:3rem; }
+            .hero p { font-size:1.3rem; }
+            .nav-links { flex-direction:column; gap:1.2rem; margin-top:1rem; }
+            .stats { gap:2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Clean Header (no toolbar at the top) -->
+    <header>
+        <nav>
+            <div class="logo">AccessHub Scotland</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="support.html">Support Services</a></li>
+                <li><a href="technologies.html">Assistive Tech</a></li>
+                <li><a href="campus.html">Campus Access</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="faq.html">FAQ & Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>AccessHub Scotland</h1>
+        <p>Your central hub for disability support, DSA funding, and inclusive education across all Scottish universities</p>
+        <a href="support.html" class="btn">Find Your Support Now</a>
+    </section>
+
+    <!-- Quick Links -->
+    <div class="container">
+        <h2>How Can We Help You?</h2>
+        <div class="grid">
+            <a href="support.html" class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3073/3073465.png" alt="">
+                <h3>Get Support & DSA</h3>
+                <p>Apply for Disabled Students’ Allowance, request adjustments, contact your university team</p>
+            </a>
+            <a href="resources.html" class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2989/2989976.png" alt="">
+                <h3>Download Resources</h3>
+                <p>Forms, guides, policies, and step-by-step help for students and staff</p>
+            </a>
+            <a href="awareness.html" class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3330/3330383.png" alt="">
+                <h3>Raise Awareness</h3>
+                <p>Training, campaigns, and ally resources for an inclusive Scotland</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Key Information Box -->
+    <div class="container highlight-box">
+        <h2>Your Rights Under Scottish & UK Law</h2>
+        <p style="font-size:1.3rem; max-width:900px; margin:2rem auto;">
+            The <strong>Equality Act 2010</strong> requires all Scottish universities to make <strong>reasonable adjustments</strong> and remove barriers for disabled students. 
+            You are also entitled to <strong>Disabled Students’ Allowance (DSA)</strong> from SAAS — non-repayable funding for equipment, support workers, software, and travel.
+        </p>
+        <a href="about.html" class="btn" style="background:#0065bd;">Learn More About Your Rights</a>
+    </div>
+
+    <!-- Statistics -->
+    <div class="container">
+        <h2>By the Numbers</h2>
+        <div class="stats">
+            <div class="stat">
+                <strong>1 in 5</strong>
+                <p>Scottish students identify as disabled</p>
+            </div>
+            <div class="stat">
+                <strong>£23,000</strong>
+                <p>Average DSA award per student per year</p>
+            </div>
+            <div class="stat">
+                <strong>100%</strong>
+                <p>Of Scottish universities have legal inclusion duties</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Student Stories -->
+    <div class="container testimonials">
+        <h2>Real Stories from Scottish Students</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                “DSA paid for my screen reader and note-taker — I graduated with a First in Law from Edinburgh.”
+                <cite>— Callum, University of Edinburgh</cite>
+            </div>
+            <div class="testimonial">
+                “Having a BSL interpreter in every lecture changed everything for me at Glasgow.”
+                <cite>— Fatima, University of Glasgow</cite>
+            </div>
+            <div class="testimonial">
+                “Quiet exam rooms and mentoring helped me complete my degree with autism and anxiety.”
+                <cite>— Lewis, University of Stirling</cite>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p style="font-size:1.2rem;">&copy; 2025 AccessHub Scotland – Supporting inclusive higher education nationwide</p>
+        <p style="margin-top:1rem;">
+            <a href="https://www.saas.gov.uk" target="_blank">SAAS (DSA)</a> • 
+            <a href="https://www.leadscotland.org.uk" target="_blank">Lead Scotland Helpline: 0131 228 9441</a> • 
+            <a href="https://www.equalityhumanrights.com" target="_blank">Equality & Human Rights Commission</a>
+        </p>
+    </footer>
+</body>
+</html>

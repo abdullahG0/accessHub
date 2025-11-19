@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Services | AccessHub Scotland</title>
+    <meta name="description" content="Get Disabled Students’ Allowance (DSA), request reasonable adjustments, and find your university disability team.">
+    <style>
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Segoe UI', Arial, sans-serif; line-height:1.7; color:#333; background:#f8f9fc; }
+        a { color:#0065bd; text-decoration:none; }
+        a:hover { text-decoration:underline; }
+
+        header {
+            background:#003087; color:#fff; position:sticky; top:0; z-index:1000;
+            box-shadow:0 4px 20px rgba(0,0,0,0.15);
+        }
+        nav {
+            max-width:1400px; margin:0 auto; padding:1.2rem 2rem;
+            display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;
+        }
+        .logo { font-size:2.4rem; font-weight:900; letter-spacing:1.2px; }
+        .nav-links { display:flex; gap:3rem; list-style:none; }
+        .nav-links a { color:#fff; font-weight:600; font-size:1.15rem; }
+        .nav-links a:hover { color:#a8d0ff; }
+
+        .hero {
+            background: linear-gradient(rgba(0,40,135,0.82), rgba(0,20,90,0.9)),
+                        url('https://images.unsplash.com/photo-1582213782179-81b79b1b5e3a?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            color:#fff; text-align:center; padding:9rem 2rem;
+        }
+        .hero h1 { font-size:3.8rem; margin-bottom:1rem; }
+        .hero p { font-size:1.4rem; max-width:900px; margin:0 auto; }
+
+        .container { max-width:1400px; margin:5rem auto; padding:0 2rem; }
+        h2 { font-size:2.6rem; color:#003087; text-align:center; margin:4rem 0 2.5rem; }
+
+        /* Fixed: Beautiful "Need Help Now?" buttons */
+        .quick-actions {
+            background:#e6f3ff; padding:3.5rem 2rem; border-radius:20px; text-align:center;
+            margin:4rem 0; border:3px solid #0065bd;
+        }
+        .quick-actions h2 { margin-bottom:2rem; font-size:2.8rem; }
+        .action-buttons {
+            display:flex; flex-wrap:wrap; gap:1.8rem; justify-content:center; align-items:center;
+        }
+        .action-btn {
+            padding:1.3rem 2.8rem; border-radius:50px; font-weight:bold; font-size:1.25rem;
+            color:#fff; text-decoration:none; min-width:260px; display:inline-block;
+        }
+        .btn-saas { background:#00a3e0; }
+        .btn-forms { background:#003087; }
+        .btn-call { background:#d32f2f; }
+        .action-btn:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+
+        /* Fixed: Number circles no longer overlap */
+        .steps {
+            counter-reset: step;
+            max-width:1000px; margin:5rem auto;
+        }
+        .step {
+            background:#fff; padding:2.8rem 2.8rem 2.8rem 7rem; border-radius:18px; margin:2.8rem 0;
+            box-shadow:0 12px 35px rgba(0,0,0,0.1); position:relative; min-height:120px;
+        }
+        .step::before {
+            content:counter(step); counter-increment:step;
+            position:absolute; left:2rem; top:50%; transform:translateY(-50%);
+            background:#0065bd; color:#fff; width:70px; height:70px;
+            border-radius:50%; display:flex; align-items:center; justify-content:center;
+            font-size:2.4rem; font-weight:bold; box-shadow:0 6px 15px rgba(0,101,189,0.4);
+        }
+        .step h3 { font-size:1.7rem; color:#003087; margin-bottom:0.8rem; }
+
+        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(340px,1fr)); gap:3rem; margin:3rem 0; }
+        .card {
+            background:#fff; padding:2.8rem; border-radius:16px; text-align:center;
+            box-shadow:0 12px 35px rgba(0,0,0,0.1); border-left:7px solid #0065bd;
+        }
+        .card h3 { color:#003087; margin:1.5rem 0; font-size:1.6rem; }
+
+        table {
+            width:100%; border-collapse:collapse; margin:3rem 0;
+            background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.1);
+        }
+        th { background:#003087; color:#fff; padding:1.5rem; text-align:left; }
+        td { padding:1.5rem; border-bottom:1px solid #ddd; }
+        tr:last-child td { border:none; }
+
+        footer {
+            background:#001f5b; color:#ddd; text-align:center; padding:5rem 2rem;
+        }
+        footer a { color:#a8d0ff; }
+
+        @media (max-width:768px) {
+            .hero h1 { font-size:2.8rem; }
+            .action-buttons { flex-direction:column; }
+            .action-btn { min-width:280px; font-size:1.15rem; }
+            .step { padding:2.5rem 2rem 2.5rem 2rem; text-align:center; }
+            .step::before { position:static; transform:none; margin:0 auto 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">AccessHub Scotland</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="support.html">Support Services</a></li>
+                <li><a href="technologies.html">Assistive Tech</a></li>
+                <li><a href="campus.html">Campus Access</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="faq.html">FAQ & Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Support Services</h1>
+        <p>Get the help you’re entitled to — from DSA funding to university adjustments</p>
+    </section>
+
+    <div class="container">
+
+        <!-- Fixed: Beautiful Need Help Now? section -->
+        <div class="quick-actions">
+            <h2>Need Help Now?</h2>
+            <div class="action-buttons">
+                <a href="https://www.saas.gov.uk/full-time/disabled-students-allowance" target="_blank" class="action-btn btn-saas">Apply for DSA (SAAS)</a>
+                <a href="resources.html" class="action-btn btn-forms">Download Forms</a>
+                <a href="tel:01312289441" class="action-btn btn-call">Call Lead Scotland: 0131 228 9441</a>
+            </div>
+        </div>
+
+        <!-- Fixed: Clean numbered steps -->
+        <h2>How to Get Support & DSA Funding</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>1. Contact Your University Disability Team</h3>
+                <p>Tell them about your condition and needs. They’ll guide you through the process and write a support recommendation.</p>
+            </div>
+            <div class="step">
+                <h3>2. Apply for Disabled Students’ Allowance (DSA)</h3>
+                <p>Fill in the online form on the SAAS website. You’ll need medical evidence (e.g. doctor’s letter, diagnostic report).</p>
+            </div>
+            <div class="step">
+                <h3>3. Attend a Needs Assessment (free)</h3>
+                <p>An assessor recommends equipment and support. This is fully funded — you don’t pay anything.</p>
+            </div>
+            <div class="step">
+                <h3>4. Receive Your Funding & Support</h3>
+                <p>SAAS approves your DSA. Suppliers deliver equipment, mentors are arranged, and adjustments are put in place.</p>
+            </div>
+        </div>
+
+        <!-- Rest unchanged -->
+        <h2>Common Reasonable Adjustments</h2>
+        <div class="grid">
+            <div class="card"><h3>Extended exam time (25–100%)</h3></div>
+            <div class="card"><h3>Quiet or separate exam room</h3></div>
+            <div class="card"><h3>Note-taker or lecture recordings</h3></div>
+            <div class="card"><h3>BSL interpreter or electronic notetaker</h3></div>
+            <div class="card"><h3>Accessible formats (Braille, large print, audio)</h3></div>
+            <div class="card"><h3>Mentoring & study skills support</h3></div>
+        </div>
+
+        <h2>Find Your University Disability Team</h2>
+        <table>
+            <tr><th>University</th><th>Contact</th><th>Email / Phone</th></tr>
+            <tr><td data-label="University">University of Edinburgh</td><td data-label="Contact">Disability Service</td><td data-label="Contact"><a href="mailto:disability.service@ed.ac.uk">disability.service@ed.ac.uk</a> • 0131 650 6826</td></tr>
+            <tr><td data-label="University">University of Glasgow</td><td data-label="Contact">Disability Service</td><td data-label="Contact"><a href="mailto:disability@glasgow.ac.uk">disability@glasgow.ac.uk</a> • 0141 330 5496</td></tr>
+            <tr><td data-label="University">University of Strathclyde</td><td data-label="Contact">Disability & Wellbeing</td><td data-label="Contact"><a href="mailto:disability@strath.ac.uk">disability@strath.ac.uk</a> • 0141 548 3402</td></tr>
+            <tr><td data-label="University">Heriot-Watt University</td><td data-label="Contact">Disability Service</td><td data-label="Contact"><a href="mailto:disability@hw.ac.uk">disability@hw.ac.uk</a> • 0131 451 4465</td></tr>
+            <tr><td data-label="University">University of St Andrews</td><td data-label="Contact">Student Services</td><td data-label="Contact"><a href="mailto:disability@st-andrews.ac.uk">disability@st-andrews.ac.uk</a> • 01334 462020</td></tr>
+        </table>
+
+        <p style="text-align:center; margin-top:2rem; font-size:1.2rem;">
+            <strong>Can’t find your university?</strong> Email us at <a href="mailto:hello@accesshub.scot">hello@accesshub.scot</a>
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p style="font-size:1.2rem;">&copy; 2025 AccessHub Scotland – Supporting inclusive higher education nationwide</p>
+        <p style="margin-top:1rem;">
+            <a href="https://www.saas.gov.uk" target="_blank">SAAS (DSA)</a> •
+            <a href="https://www.leadscotland.org.uk" target="_blank">Lead Scotland Helpline: 0131 228 9441</a> •
+            <a href="https://www.equalityhumanrights.com" target="_blank">Equality & Human Rights Commission</a>
+        </p>
+    </footer>
+</body>
+</html>

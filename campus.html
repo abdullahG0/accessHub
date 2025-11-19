@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Access | AccessHub Scotland</title>
+    <meta name="description" content="Accessible routes, transport, housing, and inclusive events across Scottish university campuses.">
+
+    <style>
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Segoe UI', Arial, sans-serif; line-height:1.7; color:#333; background:#f8f9fc; }
+        a { color:#0065bd; text-decoration:none; }
+        a:hover { text-decoration:underline; }
+
+        header {
+            background:#003087; color:#fff; position:sticky; top:0; z-index:1000;
+            box-shadow:0 4px 20px rgba(0,0,0,0.15);
+        }
+        nav {
+            max-width:1400px; margin:0 auto; padding:1.2rem 2rem;
+            display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;
+        }
+        .logo { font-size:2.4rem; font-weight:900; letter-spacing:1.2px; }
+        .nav-links { display:flex; gap:3rem; list-style:none; }
+        .nav-links a { color:#fff; font-weight:600; font-size:1.15rem; }
+        .nav-links a:hover { color:#a8d0ff; }
+
+        .hero {
+            background: linear-gradient(rgba(0,40,135,0.82), rgba(0,20,90,0.9)),
+                        url('https://images.unsplash.com/photo-1562778612-c641c355bebd?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+            color:#fff; text-align:center; padding:9rem 2rem;
+        }
+        .hero h1 { font-size:3.8rem; margin-bottom:1rem; }
+        .hero p { font-size:1.4rem; max-width:900px; margin:0 auto; }
+
+        .container { max-width:1400px; margin:5rem auto; padding:0 2rem; }
+        h2 { font-size:2.6rem; color:#003087; text-align:center; margin:4rem 0 2.5rem; }
+
+        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(340px,1fr)); gap:3rem; }
+        .card {
+            background:#fff; padding:2.8rem; border-radius:16px;
+            box-shadow:0 12px 35px rgba(0,0,0,0.1); border-left:7px solid #0065bd;
+            transition:0.4s;
+        }
+        .card:hover { transform:translateY(-10px); }
+        .card h3 { color:#003087; margin:1.5rem 0; font-size:1.7rem; }
+
+        .map-placeholder {
+            background:#e6f0ff; height:500px; border-radius:20px;
+            display:flex; align-items:center; justify-content:center;
+            font-size:1.5rem; color:#003087; text-align:center;
+            border:4px dashed #0065bd; margin:4rem 0;
+        }
+
+        .highlight {
+            background:#e6f0ff; padding:3.5rem; border-radius:20px; text-align:center;
+            border:3px solid #0065bd; margin:5rem 0;
+        }
+        .btn {
+            display:inline-block; background:#00a3e0; color:#fff; padding:1.2rem 2.8rem;
+            border-radius:50px; font-weight:bold; font-size:1.2rem; margin:1rem;
+        }
+        .btn:hover { background:#0088c4; }
+
+        .facilities {
+            background:#fff; padding:2rem; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.08);
+        }
+        .facilities ul { columns:2; gap:3rem; list-style:none; }
+        .facilities li::before { content:"✓ "; color:#0065bd; font-weight:bold; }
+
+        footer {
+            background:#001f5b; color:#ddd; text-align:center; padding:5rem 2rem;
+        }
+        footer a { color:#a8d0ff; }
+
+        @media (max-width:768px) {
+            .hero h1 { font-size:2.8rem; }
+            .facilities ul { columns:1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Same Header -->
+    <header>
+        <nav>
+            <div class="logo">AccessHub Scotland</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="support.html">Support Services</a></li>
+                <li><a href="technologies.html">Assistive Tech</a></li>
+                <li><a href="campus.html">Campus Access</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="faq.html">FAQ & Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Campus Access</h1>
+        <p>Accessible routes, transport, housing, and inclusive events across Scottish universities</p>
+    </section>
+
+    <div class="container">
+
+        <!-- Quick Highlight -->
+        <div class="highlight">
+            <h2>All Scottish campuses must be accessible</h2>
+            <p style="font-size:1.3rem; max-width:900px; margin:2rem auto;">
+                Under the Equality Act 2010 and Scottish public sector duties, every university has accessible entrances, lifts, toilets, and hearing loops.
+            </p>
+        </div>
+
+        <!-- Campus Map Placeholder -->
+        <h2>Find Accessible Routes on Your Campus</h2>
+        <div class="map-placeholder">
+            <div>
+                <strong>Interactive Campus Accessibility Map Coming Soon</strong><br><br>
+                In the meantime, contact your university disability team for the latest accessible route maps.
+            </div>
+        </div>
+
+        <!-- Key Facilities -->
+        <h2>Standard Accessible Facilities (All Scottish Universities)</h2>
+        <div class="facilities">
+            <ul>
+                <li>Step-free access to all teaching buildings</li>
+                <li>Automatic doors and ramps</li>
+                <li>Accessible toilets on every floor</li>
+                <li>Lifts with audio announcements and Braille</li>
+                <li>Hearing loops in lecture theatres</li>
+                <li>Quiet/refuge spaces</li>
+                <li>Priority seating in classrooms</li>
+                <li>Accessible library study carrels</li>
+                <li>Height-adjustable desks available on request</li>
+                <li>Blue Badge parking near main entrances</li>
+            </ul>
+        </div>
+
+        <!-- Transport Section -->
+        <h2>Getting To & Around Campus</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Campus Shuttles & Buses</h3>
+                <p>Most universities run <strong>wheelchair-accessible shuttles</strong> (free or low cost). Lothian Buses, First Bus, and Stagecoach in Scotland have low-floor buses with ramps.</p>
+                <a href="https://www.lothianbuses.com/accessibility" target="_blank">Lothian Buses Accessibility</a>
+            </div>
+            <div class="card">
+                <h3>Trains & ScotRail</h3>
+                <p>All ScotRail trains have wheelchair spaces and priority seating. Book assistance 24h in advance.</p>
+                <a href="https://www.scotrail.co.uk/plan-your-journey/accessible-travel" target="_blank">ScotRail Accessible Travel</a><br>
+                <strong>Phone:</strong> 0800 912 2901
+            </div>
+            <div class="card">
+                <h3>Taxis & Adapted Vehicles</h3>
+                <p>Use <strong>Wheelchair Accessible Vehicles (WAVs)</strong> in all major cities. Many universities subsidise taxi costs via DSA.</p>
+                <a href="https://www.glasgowtaxis.co.uk" target="_blank">Glasgow Taxis</a> • 
+                <a href="https://www.centraltaxis.co.uk" target="_blank">Edinburgh Central Taxis</a>
+            </div>
+        </div>
+
+        <!-- Accessible Housing -->
+        <h2>Accessible University Accommodation</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Adapted Rooms</h3>
+                <p>Every Scottish university offers adapted bedrooms with:</p>
+                <ul style="margin:1rem 0; text-align:left;">
+                    <li>Wider doors & turning space</li>
+                    <li>Level-access/wet-room showers</li>
+                    <li>Emergency pull cords</li>
+                    <li>Vibrating pillows & flashing doorbells (deaf students)</li>
+                </ul>
+                <strong>Apply early</strong> — priority deadline usually March/April
+            </div>
+            <div class="card">
+                <h3>Live-in Support</h3>
+                <p>DSA can fund overnight support workers if needed. Some residences allow assistance dogs.</p>
+            </div>
+        </div>
+
+        <!-- Inclusive Events -->
+        <h2>Organising Inclusive Events</h2>
+        <div class="highlight">
+            <p style="font-size:1.2rem;">
+                All university events must be accessible. Quick checklist:
+            </p>
+            <ul style="display:inline-block; text-align:left; margin:2rem 0; font-size:1.2rem;">
+                <li>Wheelchair-accessible venue</li>
+                <li>BSL interpreter if requested</li>
+                <li>Live captioning for presentations</li>
+                <li>Microphones (no exceptions)</li>
+                <li>Accessible slides (high contrast, alt text)</li>
+                <li>Quiet space available</li>
+            </ul>
+            <a href="resources.html" class="btn">Download Event Checklist (PDF)</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p style="font-size:1.2rem;">&copy; 2025 AccessHub Scotland – Supporting inclusive higher education nationwide</p>
+        <p style="margin-top:1rem;">
+            <a href="https://www.saas.gov.uk" target="_blank">SAAS (DSA)</a> •
+            <a href="https://www.leadscotland.org.uk" target="_blank">Lead Scotland Helpline: 0131 228 9441</a> •
+            <a href="https://www.equalityhumanrights.com" target="_blank">Equality & Human Rights Commission</a>
+        </p>
+    </footer>
+</body>
+</html>

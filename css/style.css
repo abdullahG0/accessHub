@@ -1,0 +1,60 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',Arial,sans-serif; line-height:1.7; color:#333; background:#f8f9fc; transition:all 0.3s; }
+img { max-width:100%; border-radius:8px; }
+a { color:#0065bd; text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+body.high-contrast { background:#000; color:#fff; }
+body.high-contrast a { color:#00ccff; }
+body.large-text { font-size:1.5rem; }
+body.large-text h1 { font-size:3rem; }
+body.large-text h2 { font-size:2.2rem; }
+
+header { background:#003087; color:#fff; padding:1rem 0; position:sticky; top:0; z-index:1000; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
+.accessibility-toolbar {
+    background:#001f5b; padding:0.8rem; text-align:center; font-size:0.95rem;
+}
+.accessibility-toolbar button {
+    background:none; border:2px solid #fff; color:#fff; padding:0.6rem 1.2rem; margin:0 0.4rem; cursor:pointer; border-radius:6px; font-weight:bold;
+}
+.accessibility-toolbar button:hover { background:#fff; color:#001f5b; }
+
+nav { max-width:1300px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 2rem; }
+.logo { font-size:2rem; font-weight:900; letter-spacing:1px; }
+nav ul { list-style:none; display:flex; gap:2.5rem; }
+nav a { color:#fff; font-weight:600; font-size:1.1rem; transition:0.3s; }
+nav a:hover { color:#a8d0ff; text-decoration:none; }
+
+.container { max-width:1300px; margin:3rem auto; padding:0 2rem; }
+h1 { font-size:2.8rem; color:#003087; text-align:center; margin-bottom:1rem; }
+h2 { color:#003087; margin:2rem 0 1rem; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(340px, 1fr)); gap:2rem; }
+.card {
+    background:#fff; padding:2rem; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.08); border-left:5px solid #0065bd; transition:transform 0.3s;
+}
+.card:hover { transform:translateY(-5px); }
+
+.hero {
+    background:linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('../assets/images/hero.jpg') center/cover no-repeat;
+    color:#fff; text-align:center; padding:8rem 2rem; border-radius:0;
+}
+.hero h1 { font-size:3.5rem; }
+.hero p { font-size:1.3rem; max-width:900px; margin:1.5rem auto; }
+
+.btn {
+    display:inline-block; background:#0065bd; color:#fff; padding:1rem 2rem; border-radius:8px; font-weight:bold; margin-top:1rem;
+}
+.btn:hover { background:#004a99; text-decoration:none; }
+
+footer {
+    background:#001f5b; color:#ddd; text-align:center; padding:4rem 2rem; margin-top:6rem;
+}
+footer a { color:#a8d0ff; }
+
+.icon { width:40px; height:40px; margin-right:10px; vertical-align:middle; }
+
+/* Responsive */
+@media (max-width:768px) {
+    nav ul { flex-direction:column; gap:1rem; }
+    .hero h1 { font-size:2.6rem; }
+}
