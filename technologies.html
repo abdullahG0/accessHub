@@ -3,233 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assistive Technologies | AccessHub Scotland</title>
-    <meta name="description" content="Discover assistive technology funded by DSA in Scotland – screen readers, magnification, speech-to-text, and more.">
-
+    <title>Assistive Technology – AccessHub Scotland</title>
+    <meta name="description" content="Free equipment and software you can get through DSA — laptops, screen readers, mind-mapping tools and more.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Crimson+Text:wght@700&display=swap" rel="stylesheet">
     <style>
-        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family:'Segoe UI', Arial, sans-serif; line-height:1.7; color:#333; background:#f8f9fc; }
-        a { color:#0065bd; text-decoration:none; }
-        a:hover { text-decoration:underline; }
+        :root{
+            --purple:#6b4e9e;
+            --dark:#1a1a1a;
+            --grey:#555;
+            --light:#f8f9fc;
+            --header:#2d1b4d;
+            --radius:16px;
+        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        body{
+            font-family:'Inter',sans-serif;
+            font-size:17px; line-height:1.75; color:var(--dark);
+            background:#fff; padding-top:88px;
+        }
+        h1,h2,h3{font-family:'Crimson Text',serif; color:var(--purple); margin:1.8rem 0 1rem}
+        h1{font-size:2.8rem}
+        h2{font-size:2.2rem}
+        h3{font-size:1.75rem}
+        a{color:var(--purple); text-decoration:none; font-weight:600}
+        a:hover{opacity:0.85}
 
-        header {
-            background:#003087; color:#fff; position:sticky; top:0; z-index:1000;
-            box-shadow:0 4px 20px rgba(0,0,0,0.15);
+        header{
+            position:fixed; top:0; left:0; width:100%; background:var(--header);
+            color:#fff; z-index:1000; padding:1rem 0;
+            box-shadow:0 6px 20px rgba(0,0,0,0.15);
         }
-        nav {
-            max-width:1400px; margin:0 auto; padding:1.2rem 2rem;
-            display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;
-        }
-        .logo { font-size:2.4rem; font-weight:900; letter-spacing:1.2px; }
-        .nav-links { display:flex; gap:3rem; list-style:none; }
-        .nav-links a { color:#fff; font-weight:600; font-size:1.15rem; }
-        .nav-links a:hover { color:#a8d0ff; }
+        nav{max-width:1300px; margin:0 auto; padding:0 2rem; text-align:center}
+        .logo{font-size:2.1rem; font-weight:700; color:#fff}
+        .nav-links a{color:#fff; font-size:1rem; margin:0 1rem; padding:0.6rem 0; display:inline-block}
+        .nav-links a:hover{text-decoration:underline}
 
-        .hero {
-            background: linear-gradient(rgba(0,40,135,0.82), rgba(0,20,90,0.9)),
-                        url('https://images.unsplash.com/photo-1517430816045-df4b7de11d21?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-            color:#fff; text-align:center; padding:9rem 2rem;
+        .hero{
+            background:linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%);
+            padding:6rem 2rem; text-align:center;
         }
-        .hero h1 { font-size:3.8rem; margin-bottom:1rem; }
-        .hero p { font-size:1.4rem; max-width:900px; margin:0 auto; }
+        .hero h1{font-size:3rem; margin-bottom:0.8rem}
+        .hero p{font-size:1.25rem; color:var(--grey); max-width:800px; margin:0 auto}
 
-        .container { max-width:1400px; margin:5rem auto; padding:0 2rem; }
-        h2 { font-size:2.6rem; color:#003087; text-align:center; margin:4rem 0 2.5rem; }
+        .container{max-width:1100px; margin:0 auto; padding:3rem 2rem}
 
-        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(340px,1fr)); gap:3rem; }
-        .card {
-            background:#fff; padding:2.8rem; border-radius:16px;
-            box-shadow:0 12px 35px rgba(0,0,0,0.1); border-left:7px solid #0065bd;
-            transition:0.4s;
+        .quick-actions{
+            background:var(--light); padding:3.5rem 2rem; text-align:center;
+            border-radius:var(--radius); margin:3rem 0; box-shadow:0 8px 30px rgba(0,0,0,0.06)
         }
-        .card:hover { transform:translateY(-10px); }
-        .card h3 { color:#003087; margin:1.5rem 0 1rem; font-size:1.7rem; }
+        .btn{
+            display:inline-block; background:var(--purple); color:#fff;
+            padding:1rem 2.2rem; border-radius:50px; font-size:1.1rem; font-weight:600;
+            margin:0.8rem; min-width:240px; box-shadow:0 6px 20px rgba(107,78,158,0.3);
+            transition:all 0.3s
+        }
+        .btn:hover{transform:translateY(-4px); box-shadow:0 12px 30px rgba(107,78,158,0.4)}
 
-        .tech-table {
-            width:100%; border-collapse:collapse; margin:3rem 0;
-            background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.1);
+        .grid{
+            display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:2rem; margin:3rem 0
         }
-        .tech-table th {
-            background:#003087; color:#fff; padding:1.8rem; text-align:left;
+        .card{
+            background:#fff; padding:2rem; border-radius:var(--radius);
+            box-shadow:0 8px 25px rgba(0,0,0,0.07); transition:0.3s;
+            border-left:5px solid var(--purple);
         }
-        .tech-table td {
-            padding:1.8rem; border-bottom:1px solid #eee; vertical-align:top;
-        }
-        .tech-table tr:last-child td { border:none; }
-        .tag {
-            display:inline-block; background:#0065bd; color:#fff; padding:0.4rem 1rem;
-            border-radius:20px; font-size:0.9rem; margin-right:0.5rem;
-        }
-        .tag.free { background:#2e7d32; }
-        .tag.dsa { background:#d32f2f; }
+        .card:hover{transform:translateY(-6px); box-shadow:0 15px 40px rgba(0,0,0,0.1)}
 
-        .highlight {
-            background:#e6f0ff; padding:3.5rem; border-radius:20px; text-align:center;
-            border:3px solid #0065bd; margin:5rem 0;
+        footer{
+            background:#111; color:#ccc; padding:4rem 2rem; text-align:center; margin-top:6rem
         }
-        .btn {
-            display:inline-block; background:#00a3e0; color:#fff; padding:1.2rem 2.8rem;
-            border-radius:50px; font-weight:bold; font-size:1.2rem; margin:1rem;
-        }
-        .btn:hover { background:#0088c4; }
+        footer a{color:#ccc}
 
-        footer {
-            background:#001f5b; color:#ddd; text-align:center; padding:5rem 2rem;
-        }
-        footer a { color:#a8d0ff; }
-
-        @media (max-width:768px) {
-            .hero h1 { font-size:2.8rem; }
-            .tech-table, thead, tbody, th, td, tr { display:block; }
-            th { display:none; }
-            td { border:none; border-bottom:1px solid #eee; padding-left:50%; position:relative; }
-            td::before { content:attr(data-label); position:absolute; left:1rem; font-weight:bold; width:45%; }
+        @media (max-width:768px){
+            body{font-size:18px}
+            nav{flex-direction:column; text-align:center}
+            .nav-links a{display:block; margin:0.5rem 0}
+            .btn{display:block; margin:1rem auto; width:90%; max-width:320px}
         }
     </style>
 </head>
 <body>
 
-    <!-- Same Header -->
-    <header>
-        <nav>
-            <div class="logo">AccessHub Scotland</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="support.html">Support Services</a></li>
-                <li><a href="technologies.html">Assistive Tech</a></li>
-                <li><a href="campus.html">Campus Access</a></li>
-                <li><a href="awareness.html">Awareness</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="faq.html">FAQ & Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero -->
-    <section class="hero">
-        <h1>Assistive Technologies</h1>
-        <p>All of these can be funded through your Disabled Students’ Allowance (DSA) in Scotland</p>
-    </section>
-
-    <div class="container">
-
-        <!-- Intro Highlight -->
-        <div class="highlight">
-            <h2>DSA Pays for Specialist Technology</h2>
-            <p style="font-size:1.3rem; max-width:900px; margin:2rem auto;">
-                After your needs assessment, SAAS funds laptops, software, ergonomic equipment, and training — <strong>you don’t pay anything</strong>.
-            </p>
+<header>
+    <nav>
+        <div class="logo">AccessHub Scotland</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="support.html">Support</a>
+            <a href="technologies.html">Technology</a>
+            <a href="campus.html">Campus</a>
+            <a href="awareness.html">Awareness</a>
+            <a href="resources.html">Resources</a>
+            <a href="faq.html">FAQ & Contact</a>
         </div>
+    </nav>
+</header>
 
-        <!-- Main Categories Table -->
-        <h2>Most Common DSA-Funded Technologies</h2>
-        <table class="tech-table">
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Popular Tools</th>
-                    <th>Who It Helps</th>
-                    <th>Cost to Student</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-label="Category"><strong>Screen Readers</strong></td>
-                    <td>
-                        JAWS • NVDA (free) • VoiceOver (Mac) • TalkBack (Android)<br>
-                        <a href="https://www.nvaccess.org/download/" target="_blank">Download NVDA (free)</a>
-                    </td>
-                    <td>Blind or visually impaired students</td>
-                    <td><span class="tag dsa">DSA funded</span> or <span class="tag free">Free</span></td>
-                </tr>
-                <tr>
-                    <td data-label="Category"><strong>Magnification & Read-Aloud</strong></td>
-                    <td>
-                        ZoomText • SuperNova • Microsoft Immersive Reader • ClaroRead<br>
-                        Built-in: Windows Magnifier, macOS Zoom
-                    </td>
-                    <td>Low vision, dyslexia, processing difficulties</td>
-                    <td><span class="tag dsa">DSA funded</span></td>
-                </tr>
-                <tr>
-                    <td data-label="Category"><strong>Speech-to-Text</strong></td>
-                    <td>
-                        Dragon Professional • Windows Dictation • Google Docs Voice Typing (free)<br>
-                        Otter.ai (limited free)
-                    </td>
-                    <td>Dyslexia, physical disabilities, RSI</td>
-                    <td><span class="tag dsa">DSA funded</span> or <span class="tag free">Free options</span></td>
-                </tr>
-                <tr>
-                    <td data-label="Category"><strong>Mind Mapping & Organisation</strong></td>
-                    <td>
-                        Inspiration • MindView • XMind • LiquidText<br>
-                        Microsoft OneNote (free with university account)
-                    </td>
-                    <td>Dyslexia, ADHD, autism</td>
-                    <td><span class="tag dsa">DSA funded</span></td>
-                </tr>
-                <tr>
-                    <td data-label="Category"><strong>Literacy & Proofreading</strong></td>
-                    <td>
-                        TextHelp Read&Write • Glean (lecture capture) • Grammarly Premium<br>
-                        Microsoft Editor (free)
-                    </td>
-                    <td>Dyslexia, English as additional language</td>
-                    <td><span class="tag dsa">DSA funded</span></td>
-                </tr>
-                <tr>
-                    <td data-label="Category"><strong>Ergonomic & Mobility Aids</strong></td>
-                    <td>
-                        Specialist chairs • height-adjustable desks • large monitors<br>
-                        Trackball mice • vertical mice • voice-controlled mouse
-                    </td>
-                    <td>Chronic pain, mobility impairments</td>
-                    <td><span class="tag dsa">DSA funded</span></td>
-                </tr>
-            </tbody>
-        </table>
+<section class="hero">
+    <h1>Assistive Technology</h1>
+    <p>All the equipment and software you can get for free through DSA — no cost to you</p>
+</section>
 
-        <!-- Free Built-in Tools -->
-        <h2>Free Tools You Can Use Right Now</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Windows Accessibility</h3>
-                <p>Magnifier • Narrator • On-Screen Keyboard • Speech Recognition</p>
-                <a href="https://support.microsoft.com/en-gb/windows/complete-guide-to-accessibility-features-in-windows-11" target="_blank" class="btn" style="font-size:1rem;padding:0.8rem 1.5rem;">Open Windows Settings</a>
-            </div>
-            <div class="card">
-                <h3>macOS & iOS</h3>
-                <p>VoiceOver • Zoom • Dictation • Live Captions</p>
-                <a href="https://support.apple.com/accessibility" target="_blank" class="btn" style="font-size:1rem;padding:0.8rem 1.5rem;">Apple Accessibility</a>
-            </div>
-            <div class="card">
-                <h3>Android</h3>
-                <p>TalkBack • Magnification • Select to Speak • Live Transcribe</p>
-                <a href="https://support.google.com/accessibility/android" target="_blank" class="btn" style="font-size:1rem;padding:0.8rem 1.5rem;">Android Settings</a>
-            </div>
+<div class="quick-actions">
+    <h2>Ready to get your tech?</h2>
+    <a href="support.html" class="btn">Start Your DSA Application</a>
+    <a href="faq.html" class="btn">Common Questions About Tech</a>
+</div>
+
+<div class="container">
+
+    <h2 style="text-align:center">Most Common DSA-Funded Items</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>High-spec Laptop + Printer</h3>
+            <p>Powerful Windows laptop with extended warranty, plus a colour printer and scanner.</p>
         </div>
-
-        <div class="highlight">
-            <h2>Need Help Choosing?</h2>
-            <p style="font-size:1.2rem;">
-                Your DSA Needs Assessment is free and will recommend exactly what works for you.<br>
-                Contact your university disability team to book one.
-            </p>
-            <a href="support.html" class="btn">Back to Support Services</a>
+        <div class="card">
+            <h3>Dragon NaturallySpeaking</h3>
+            <p>Speech-to-text software — dictate essays instead of typing.</p>
         </div>
-
+        <div class="card">
+            <h3>MindView or Inspiration</h3>
+            <p>Mind-mapping software to help plan essays and revise.</p>
+        </div>
+        <div class="card">
+            <h3>Read&Write Gold</h3>
+            <p>Text-to-speech, word prediction, study tools and more.</p>
+        </div>
+        <div class="card">
+            <h3>Ergonomic Equipment</h3>
+            <p>Specialist chair, wrist rests, document holder, large monitor.</p>
+        </div>
+        <div class="card">
+            <h3>Noise-Cancelling Headphones</h3>
+            <p>For students with ADHD, autism or sensory issues.</p>
+        </div>
     </div>
 
-    <!-- Same Footer -->
-    <footer>
-        <p style="font-size:1.2rem;">&copy; 2025 AccessHub Scotland – Supporting inclusive higher education nationwide</p>
-        <p style="margin-top:1rem;">
-            <a href="https://www.saas.gov.uk" target="_blank">SAAS (DSA)</a> • 
-            <a href="https://www.leadscotland.org.uk" target="_blank">Lead Scotland Helpline: 0131 228 9441</a> • 
-            <a href="https://www.equalityhumanrights.com" target="_blank">Equality & Human Rights Commission</a>
-        </p>
-    </footer>
+    <h2 style="text-align:center; margin-top:4rem">You Can Also Get</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Human Support</h3>
+            <p>Note-takers, BSL interpreters, study skills tutors, mentors — all paid for.</p>
+        </div>
+        <div class="card">
+            <h3>Travel Help</h3>
+            <p>Taxi costs if public transport isn’t accessible.</p>
+        </div>
+        <div class="card">
+            <h3>Consumables Allowance</h3>
+            <p>£200+ per year for ink, paper, etc.</p>
+        </div>
+    </div>
+
+    <p style="text-align:center; margin:4rem 0 2rem; font-size:1.2rem">
+        <strong>Worried you won’t get what you need?</strong><br>
+        The Needs Assessment is designed to recommend everything that will help you study.
+    </p>
+    <div style="text-align:center">
+        <a href="support.html" class="btn">How to Apply for DSA →</a>
+    </div>
+
+</div>
+
+<footer>
+    <p style="font-size:1.1rem">&copy; 2025 AccessHub Scotland</p>
+    <p>Supporting every disabled student in Scottish universities</p>
+    <p style="margin-top:1rem">
+        <a href="https://www.saas.gov.uk">SAAS</a> • 
+        <a href="https://www.leadscotland.org.uk">Lead Scotland</a> • 
+        <a href="https://www.equalityhumanrights.com">Equality & Human Rights</a>
+    </p>
+</footer>
 </body>
 </html>

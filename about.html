@@ -3,193 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | AccessHub Scotland</title>
-    <meta name="description" content="Learn about AccessHub Scotland – your national resource for disability inclusion in Scottish higher education.">
-
+    <title>About Us – AccessHub Scotland</title>
+    <meta name="description" content="Who we are and why we help disabled students in Scotland.">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <style>
-        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family:'Segoe UI', Arial, sans-serif; line-height:1.7; color:#333; background:#f8f9fc; }
-        img { max-width:100%; border-radius:12px; display:block; }
-        a { color:#0065bd; text-decoration:none; }
-        a:hover { text-decoration:underline; }
-
-        header {
-            background:#003087; color:#fff; position:sticky; top:0; z-index:1000;
-            box-shadow:0 4px 20px rgba(0,0,0,0.15);
+        :root { --purple:#6b4e9e; --dark:#222; --grey:#555; --light:#f9f9f9; --header-bg:#2d1b4d; }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        body{
+            font-family:'Open Sans',sans-serif;
+            font-size:18px; line-height:1.8; color:var(--dark);
+            background:#ffffff; padding-top:100px;
         }
-        nav {
-            max-width:1400px; margin:0 auto; padding:1.2rem 2rem;
-            display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;
+        h1,h2,h3,h4{font-family:'Merriweather',serif; color:var(--purple); margin:2rem 0 1rem}
+        h1{font-size:3rem; line-height:1.3}
+        h2{font-size:2.4rem}
+        a{color:var(--purple); text-decoration:underline; font-weight:600}
+        a:hover{opacity:0.8}
+
+        header{
+            position:fixed; top:0; left:0; width:100%; 
+            background:var(--header-bg); color:#fff; 
+            z-index:1000; padding:1.2rem 0;
+            box-shadow:0 4px 15px rgba(0,0,0,0.2);
         }
-        .logo { font-size:2.4rem; font-weight:900; letter-spacing:1.2px; }
-        .nav-links { display:flex; gap:3rem; list-style:none; }
-        .nav-links a { color:#fff; font-weight:600; font-size:1.15rem; }
-        .nav-links a:hover { color:#a8d0ff; }
-
-        .hero {
-            background: linear-gradient(rgba(0,40,135,0.8), rgba(0,20,90,0.9)),
-                        url('https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-            color:#fff; text-align:center; padding:9rem 2rem;
+        nav{max-width:1300px; margin:0 auto; padding:0 2rem; text-align:center}
+        .logo{
+            font-size:2.4rem; font-weight:700; color:#fff; margin-bottom:0.5rem;
         }
-        .hero h1 { font-size:3.8rem; margin-bottom:1rem; }
-        .hero p { font-size:1.4rem; max-width:900px; margin:0 auto; }
-
-        .container { max-width:1400px; margin:5rem auto; padding:0 2rem; }
-        h2 { font-size:2.6rem; color:#003087; text-align:center; margin:4rem 0 2.5rem; }
-        .section { margin-bottom:5rem; }
-
-        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(340px,1fr)); gap:3rem; }
-        .card {
-            background:#fff; padding:2.8rem; border-radius:16px; text-align:center;
-            box-shadow:0 12px 35px rgba(0,0,0,0.1); border-left:7px solid #0065bd;
-            transition:0.4s;
+        .nav-links a{
+            color:#fff; font-size:1.1rem; margin:0 1.2rem; padding:0.5rem 0;
+            display:inline-block; text-decoration:none;
         }
-        .card:hover { transform:translateY(-10px); }
-        .card h3 { color:#003087; margin:1.5rem 0; font-size:1.6rem; }
-        .card p { font-size:1.1rem; }
+        .nav-links a:hover{opacity:0.8}
 
-        .highlight {
-            background:#e6f0ff; padding:3.5rem; border-radius:20px; text-align:center;
-            border:3px solid #0065bd; margin:4rem 0;
+        .hero{
+            background:#fafafa; padding:6rem 2rem; text-align:center; border-bottom:3px solid #eee
         }
-        .highlight h2 { margin-bottom:1.5rem; }
+        .hero h1{font-size:3.2rem; margin-bottom:1rem}
 
-        .team-img {
-            width:180px; height:180px; border-radius:50%; margin:0 auto 1.5rem;
-            object-fit:cover; border:6px solid #0065bd;
+        .container{max-width:1100px; margin:0 auto; padding:4rem 2rem}
+        .content-section{margin:3rem 0}
+        .content-section p{margin-bottom:1.5rem; font-size:1.15rem}
+        ul{big-list-style:disc; padding-left:2.5rem; margin:1.5rem 0}
+        li{margin-bottom:0.8rem; font-size:1.15rem}
+
+        .btn{
+            display:inline-block; background:var(--purple); color:#fff;
+            padding:1.2rem 2.5rem; border-radius:8px; font-size:1.3rem; margin:1.5rem 0;
+            text-decoration:none; font-weight:600
         }
+        .btn:hover{background:#563d7c}
 
-        .mission-grid {
-            display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;
-            margin:5rem 0;
+        footer{
+            background:#222; color:#ddd; padding:4rem 2rem; text-align:center; margin-top:5rem
         }
-        .mission-text { font-size:1.2rem; }
+        footer a{color:#ddd}
 
-        footer {
-            background:#001f5b; color:#ddd; text-align:center; padding:5rem 2rem;
-        }
-        footer a { color:#a8d0ff; }
-
-        @media (max-width:768px) {
-            .hero h1 { font-size:2.8rem; }
-            .mission-grid { grid-template-columns:1fr; }
-            .nav-links { flex-direction:column; gap:1.2rem; margin-top:1rem; }
+        @media (max-width:768px){
+            body{font-size:19px}
+            .nav-links a{display:block; margin:0.8rem 0}
         }
     </style>
 </head>
 <body>
 
-    <!-- Same Header as Homepage -->
-    <header>
-        <nav>
-            <div class="logo">AccessHub Scotland</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="support.html">Support Services</a></li>
-                <li><a href="technologies.html">Assistive Tech</a></li>
-                <li><a href="campus.html">Campus Access</a></li>
-                <li><a href="awareness.html">Awareness</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="faq.html">FAQ & Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>About AccessHub Scotland</h1>
-        <p>Scotland’s leading independent resource for disability inclusion in higher education</p>
-    </section>
-
-    <div class="container">
-
-        <!-- Mission & Vision -->
-        <div class="mission-grid">
-            <div>
-                <h2>Our Mission</h2>
-                <p class="mission-text">
-                    To ensure <strong>every disabled student in Scotland</strong> can access higher education on equal terms — through clear information, strong rights awareness, and practical support.
-                </p>
-                <p class="mission-text">
-                    We work with students, universities, SAAS, and disability organisations to remove barriers and promote best practice across all 19 Scottish higher education institutions.
-                </p>
-            </div>
-            <div>
-                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80" alt="Diverse group of Scottish students smiling">
-            </div>
+<header>
+    <nav>
+        <div class="logo">AccessHub Scotland</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="support.html">Support</a>
+            <a href="technologies.html">Technology</a>
+            <a href="campus.html">Campus</a>
+            <a href="awareness.html">Awareness</a>
+            <a href="resources.html">Resources</a>
+            <a href="faq.html">FAQ & Contact</a>
         </div>
+    </nav>
+</header>
 
-        <!-- Key Laws Section -->
-        <h2>Your Rights – Scottish & UK Law</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Equality Act 2010</h3>
-                <p>All Scottish universities must make <strong>reasonable adjustments</strong> and not discriminate against disabled students in admission, teaching, or services.</p>
-            </div>
-            <div class="card">
-                <h3>Disabled Students’ Allowance (DSA)</h3>
-                <p>Non-repayable funding from <strong>SAAS</strong> covering specialist equipment, support workers, software, and travel costs — available to undergraduates and postgraduates.</p>
-            </div>
-            <div class="card">
-                <h3>BSL (Scotland) Act 2015</h3>
-                <p>Promotes British Sign Language and requires public authorities (including universities) to publish BSL plans and provide interpretation when needed.</p>
-            </div>
-            <div class="card">
-                <h3>UN Convention on the Rights of Persons with Disabilities</h3>
-                <p>The UK (including Scotland) is fully signed up — guaranteeing the right to inclusive education at all levels.</p>
-            </div>
-        </div>
+<section class="hero">
+    <h1>About AccessHub Scotland</h1>
+    <p>Simple, clear help for every disabled student in Scotland — made by people who understand.</p>
+</section>
 
-        <!-- What We Do -->
-        <div class="highlight">
-            <h2>What We Do</h2>
-            <div class="grid" style="margin-top:2rem;">
-                <div class="card">
-                    <h3>Support Students</h3>
-                    <p>Free guides, helpline links, DSA application help</p>
-                </div>
-                <div class="card">
-                    <h3>Train Staff & Students</h3>
-                    <p>Inclusive teaching workshops, ally training, event accessibility</p>
-                </div>
-                <div class="card">
-                    <h3>Advise Universities</h3>
-                    <p>Policy reviews, accessibility audits, Outcome Agreement support</p>
-                </div>
-            </div>
-        </div>
+<div class="container">
 
-        <!-- Partners -->
-        <h2>Our Partners & Supporters</h2>
-        <p style="text-align:center; font-size:1.2rem; max-width:900px; margin:0 auto 3rem;">
-            We work closely with universities, charities, and government bodies across Scotland:
-        </p>
-        <div class="grid">
-            <div class="card">
-                <strong>Universities</strong><br>
-                Edinburgh • Glasgow • St Andrews • Strathclyde • Heriot-Watt • Stirling • Dundee • Aberdeen
-            </div>
-            <div class="card">
-                <strong>Organisations</strong><br>
-                Lead Scotland • Disability Rights UK • Scope • Scottish Disability Equality Forum
-            </div>
-            <div class="card">
-                <strong>Government & Funding</strong><br>
-                Student Awards Agency Scotland (SAAS) • Scottish Funding Council • Equality and Human Rights Commission
-            </div>
-        </div>
-
+    <div class="content-section">
+        <h2>Who We Are</h2>
+        <p>We are an independent, student-led project created to make university life easier for disabled students across Scotland.</p>
+        <p>We are not part of any university or government — we just want to help you get the support you deserve, in the simplest way possible.</p>
     </div>
 
-    <!-- Footer (same as homepage) -->
-    <footer>
-        <p style="font-size:1.2rem;">&copy; 2025 AccessHub Scotland – Supporting inclusive higher education nationwide</p>
-        <p style="margin-top:1rem;">
-            <a href="https://www.saas.gov.uk" target="_blank">SAAS (DSA)</a> • 
-            <a href="https://www.leadscotland.org.uk" target="_blank">Lead Scotland Helpline: 0131 228 9441</a> • 
-            <a href="https://www.equalityhumanrights.com" target="_blank">Equality & Human Rights Commission</a>
+    <div class="content-section">
+        <h2>What We Do</h2>
+        <p>We explain everything in plain English (no confusing jargon) including:</p>
+        <ul>
+            <li>How to apply for Disabled Students’ Allowance (DSA)</li>
+            <li>What technology and help you can get for free</li>
+            <li>How to get extra time in exams and other adjustments</li>
+            <li>Accessible housing, transport and campus information</li>
+            <li>Your rights under the Equality Act</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2>Why We Do This</h2>
+        <p>Many disabled students miss out on support because the information is hard to find or too complicated.</p>
+        <p>We believe every disabled student should:</p>
+        <ul>
+            <li>Know their rights</li>
+            <li>Get the funding they’re entitled to</li>
+            <li>Feel confident and included at university</li>
+        </ul>
+    </div>
+
+    <div class="content-section" style="text-align:center; padding:3rem 0">
+        <p style="font-size:1.4rem; margin-bottom:2rem;">
+            Have a question? We’re here to help — no question is too small.
         </p>
-    </footer>
+        <a href="faq.html" class="btn">Contact Us or View FAQ</a>
+    </div>
+
+</div>
+
+<footer>
+    <p style="font-size:1.3rem">&copy; 2025 AccessHub Scotland</p>
+    <p>Supporting every disabled student in Scottish universities</p>
+    <p style="margin-top:1rem">
+        <a href="https://www.saas.gov.uk">SAAS</a> • 
+        <a href="https://www.leadscotland.org.uk">Lead Scotland</a> • 
+        <a href="https://www.equalityhumanrights.com">Equality & Human Rights</a>
+    </p>
+</footer>
 </body>
 </html>
