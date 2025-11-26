@@ -1,143 +1,327 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AccessHub Scotland – Easy Access to University Support</title>
-    <meta name="description" content="Simple, clear help for disabled students in Scotland.">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root { --purple:#6b4e9e; --dark:#222; --grey:#555; --light:#f9f9f9; --header-bg:#2d1b4d; }
-        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-        body{
-            font-family:'Open Sans',sans-serif;
-            font-size:18px; line-height:1.8; color:var(--dark);
-            background:#ffffff; padding-top:100px;
-        }
-        h1,h2,h3,h4{font-family:'Merriweather',serif; color:var(--purple); margin:2rem 0 1rem}
-        h1{font-size:3rem; line-height:1.3}
-        h2{font-size:2.4rem}
-        a{color:var(--purple); text-decoration:underline; font-weight:600}
-        a:hover{opacity:0.8}
-
-        /* DARKER, CLEAR HEADER */
-        header{
-            position:fixed; top:0; left:0; width:100%; 
-            background:var(--header-bg); color:#fff; 
-            z-index:1000; padding:1.2rem 0;
-            box-shadow:0 4px 15px rgba(0,0,0,0.2);
-        }
-        nav{max-width:1300px; margin:0 auto; padding:0 2rem; text-align:center}
-        .logo{
-            font-size:2.4rem; font-weight:700; color:#fff; margin-bottom:0.5rem;
-        }
-        .nav-links a{
-            color:#fff; font-size:1.1rem; margin:0 1.2rem; padding:0.5rem 0;
-            display:inline-block; text-decoration:none;
-        }
-        .nav-links a:hover{opacity:0.8}
-
-        .hero{
-            background:#fafafa; padding:5rem 2rem; text-align:center; border-bottom:3px solid #eee
-        }
-        .hero h1{font-size:3.2rem; margin-bottom:1rem}
-        .hero p{font-size:1.4rem; max-width:900px; margin:1.5rem auto; color:var(--grey)}
-
-        .container{max-width:1100px; margin:0 auto; padding:4rem 2rem}
-        .btn{
-            display:inline-block; background:var(--purple); color:#fff;
-            padding:1.2rem 2.5rem; border-radius:8px; font-size:1.3rem; margin:1rem;
-            text-decoration:none; font-weight:600
-        }
-        .btn:hover{background:#563d7c}
-
-        .cards{
-            display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:2.5rem; margin:4rem 0
-        }
-        .card{
-            background:#fff; padding:2.5rem; border:3px solid #eee; border-radius:12px;
-            text-align:center; box-shadow:0 4px 15px rgba(0,0,0,0.05)
-        }
-        .card h3{font-size:1.8rem; margin:1rem 0}
-
-        .quick-actions{
-            background:var(--light); padding:4rem 2rem; text-align:center; margin:4rem 0
-        }
-        .quick-actions .btn{margin:1rem 1.5rem; min-width:280px}
-
-        footer{
-            background:#222; color:#ddd; padding:4rem 2rem; text-align:center; margin-top:5rem
-        }
-        footer a{color:#ddd}
-
-        @media (max-width:768px){
-            body{font-size:19px}
-            .nav-links a{display:block; margin:0.8rem 0}
-            .quick-actions .btn{display:block; margin:1rem auto; width:90%}
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Equal Access Scotland – Disability Support for Students</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--primary:#2563eb;--primary-light:#dbeafe;--dark:#1e293b;--light:#f8fafc;--accent:#7c3aed;}
+    body{font-family:'Inter',sans-serif;background:var(--light);color:var(--dark);line-height:1.6;}
+    .navbar{background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);box-shadow:0 4px 30px rgba(0,0,0,0.08);}
+    .hero{background:linear-gradient(rgba(37,99,235,0.92),rgba(124,58,237,0.88)),url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2850&auto=format&fit=crop');background-size:cover;color:white;}
+    .card-hover{transition:all .3s;}.card-hover:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(0,0,0,0.12);}
+    .btn-primary{background:var(--primary);border:none;border-radius:50px;padding:12px 32px;}
+    .accessibility-btn{position:fixed;bottom:24px;right:24px;z-index:9999;background:var(--primary);color:white;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,99,235,0.5);}
+    footer{background:var(--dark);color:#e2e8f0;}
+    .stat-card{background:var(--primary-light);border-radius:16px;padding:2rem;text-align:center;}
+    .partner-logo{height:60px;object-fit:contain;filter:grayscale(30%);
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <nav>
-        <div class="logo">AccessHub Scotland</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="support.html">Support</a>
-            <a href="technologies.html">Technology</a>
-            <a href="campus.html">Campus</a>
-            <a href="awareness.html">Awareness</a>
-            <a href="resources.html">Resources</a>
-            <a href="faq.html">FAQ & Contact</a>
-        </div>
-    </nav>
-</header>
+<button class="accessibility-btn btn btn-lg" data-bs-toggle="modal" data-bs-target="#accModal">
+  <i class="bi bi-universal-access-circle fs-3"></i>
+</button>
 
-<section class="hero">
-    <h1>AccessHub Scotland</h1>
-    <p>Simple, clear, and friendly help for disabled students at university in Scotland.</p>
-    <p>We explain everything in plain language — no jargon.</p>
-    <a href="support.html" class="btn">Get Support Now</a>
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3 text-primary" href="index.html">Equal Access Scotland</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto fw-medium">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="technologies.html">Technologies</a></li>
+        <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+        <li class="nav-item"><a class="nav-link" href="campus.html">Campus</a></li>
+        <li class="nav-item"><a class="nav-link" href="awareness.html">Awareness</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero py-5 text-center">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h1 class="display-3 fw-bold mb-4">Inclusion Starts Here</h1>
+        <p class="lead fs-3 mb-5">Your complete guide to disability support, DSA funding, and accessibility in Scottish universities & colleges</p>
+        <a href="support.html" class="btn btn-light btn-lg px-5 me-3">Get Support Now</a>
+        <a href="about.html" class="btn btn-outline-light btn-lg px-5">Learn Your Rights</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="quick-actions">
-    <h2 style="margin-bottom:2rem; color:var(--purple)">Need Help Right Now?</h2>
-    <a href="https://www.saas.gov.uk/full-time/disabled-students-allowance" class="btn">Apply for DSA (SAAS)</a>
-    <a href="resources.html" class="btn">Download Forms</a>
-    <a href="tel:01312289441" class="btn" style="background:#d32f2f">Call Lead Scotland: 0131 228 9441</a>
-</div>
-
-<div class="container">
-    <h2>How Can We Help You?</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Apply for Funding (DSA)</h3>
-            <p>Get money for laptops, software, support workers and more — all free.</p>
-            <a href="support.html">Find out how →</a>
-        </div>
-        <div class="card">
-            <h3>Assistive Technology</h3>
-            <p>Screen readers, speech-to-text, mind mapping tools — all paid for.</p>
-            <a href="technologies.html">See what’s available →</a>
-        </div>
-        <div class="card">
-            <h3>Campus Access</h3>
-            <p>Accessible routes, housing, transport and events.</p>
-            <a href="campus.html">View campus help →</a>
-        </div>
+<!-- QUICK STATS -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-md-4"><div class="stat-card">
+        <h3 class="fw-bold text-primary">1 in 5</h3>
+        <p class="fs-5">Scottish students declare a disability</p>
+      </div></div>
+      <div class="col-md-4"><div class="stat-card">
+        <h3 class="fw-bold text-primary">£12,000+</h3>
+        <p class="fs-5">Average DSA award per year</p>
+      </div></div>
+      <div class="col-md-4"><div class="stat-card">
+        <h3 class="fw-bold text-primary">100%</h3>
+        <p class="fs-5">Scottish unis have a legal duty to make reasonable adjustments</p>
+      </div></div>
     </div>
+  </div>
+</section>
+
+<!-- QUICK ACCESS CARDS -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 display-5">How Can We Help You Today?</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow card-hover text-center p-4">
+          <i class="bi bi-headset fs-1 text-primary mb-4"></i>
+          <h4>Support Services</h4>
+          <p>Lead Scotland helpline • University disability teams • DSA applications</p>
+          <a href="support.html" class="btn btn-primary mt-3">Get Help →</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow card-hover text-center p-4">
+          <i class="bi bi-laptop fs-1 text-primary mb-4"></i>
+          <h4>Assistive Technologies</h4>
+          <p>Screen readers • Dictation • Captioning • Study software</p>
+          <a href="technologies.html" class="btn btn-primary mt-3">Explore Tools →</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow card-hover text-center p-4">
+          <i class="bi bi-building fs-1 text-primary mb-4"></i>
+          <h4>Campus Accessibility</h4>
+          <p>Access guides • Ramps • Quiet rooms • Accessible routes</p>
+          <a href="campus.html" class="btn btn-primary mt-3">Find Your Campus →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STUDENT STORIES -->
+<section class="py-5 bg-primary-light">
+  <div class="container">
+    <h2 class="text-center mb-5 display-5">Real Scottish Student Stories</h2>
+    <div class="row g-5">
+      <div class="col-md-6">
+        <div class="d-flex gap-4">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face" class="rounded-circle flex-shrink-0" width="100" alt="Aisha">
+          <div>
+            <p class="fst-italic">"DSA funded my note-taker and MindView software at Glasgow Caledonian. I graduated with a First!"</p>
+            <strong>— Aisha M., Computing</strong>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex gap-4">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" class="rounded-circle flex-shrink-0" width="100" alt="Jamie">
+          <div>
+            <p class="fst-italic">"The BSL interpreters and live captioning at Edinburgh Uni meant I never missed a lecture."</p>
+            <strong>— Jamie L., Deaf Student</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS & NEWS -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h3 class="mb-4">Trusted Scottish Partners</h3>
+        <div class="d-flex flex-wrap gap-4 align-items-center">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8_8UjrisfdbnJ3CHUYkAnJmVV_ZDcqqEd9w&s" class="partner-logo" alt="Lead Scotland">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiKCMjXact9ebkN_sihD50PXm4ijk7rkZPLw&s" class="partner-logo" alt="SAAS">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe1NV8bWUClKnBzvfcF5afT6VBh2MsHEK30Q&s" class="partner-logo" alt="AccessAble">
+          
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="mb-4">Latest Updates</h3>
+        <ul class="list-unstyled">
+          <li class="mb-3"><strong>DSA 2025/26 rates announced</strong> – up to £27,000 available</li>
+          <li class="mb-3"><strong>New BSL Plan launched</strong> at University of Strathclyde</li>
+          <li class="mb-3"><strong>Free neurodiversity training</strong> – 15 Jan 2026 (online)</li>
+        </ul>
+        <a href="awareness.html" class="btn btn-outline-primary">See All Events →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-5 display-5">Meet Our Team</h2>
+    <div class="row g-5 justify-content-center">
+
+      <!-- Abdul Rehman -->
+      <div class="col-md-6 col-lg-4">
+        <div class="team-card text-center">
+          <div class="overflow-hidden rounded-top" style="height:280px;">
+            <img src="assets/images/abdul%20rehman.jpeg" 
+                 alt="Abdul Rehman" 
+                 class="img-fluid w-100 h-100" 
+                 style="object-fit:cover; object-position:top;">
+          </div>
+          <div class="p-4">
+            <h5 class="fw-bold mb-1">Abdul Rehman</h5>
+            <p class="text-primary mb-2">Project Manager</p>
+            <p class="small text-muted mb-2">
+              MSc Project Management<br>
+              University of the West of Scotland  B01812943
+            </p>
+            <a href="mailto:a.rehmantariq2003@gmail.com" class="small text-primary text-decoration-none">
+              <i class="bi bi-envelope me-1"></i> a.rehmantariq2003@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Muhammad Usama Sarfraz -->
+      <div class="col-md-6 col-lg-4">
+        <div class="team-card text-center">
+          <div class="overflow-hidden rounded-top" style="height:280px;">
+            <img src="assets/images/usama%20sarfarz.jpeg" 
+                 alt="Muhammad Usama Sarfraz" 
+                 class="img-fluid w-100 h-100" 
+                 style="object-fit:cover; object-position:center;">
+          </div>
+          <div class="p-4">
+            <h5 class="fw-bold mb-1">Muhammad Usama Sarfraz</h5>
+            <p class="text-primary mb-2">Technical Lead & Designer</p>
+            <p class="small text-muted mb-2">
+              MSc Project Management<br>
+              University of the West of Scotland  B01814358
+            </p>
+            <a href="mailto:Usamarajput397@gmail.com" class="small text-primary text-decoration-none">
+              <i class="bi bi-envelope me-1"></i> Usamarajput397@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zaman Abbas -->
+      <div class="col-md-6 col-lg-4">
+        <div class="team-card text-center">
+          <div class="overflow-hidden rounded-top" style="height:280px;">
+            <img src="assets/images/zaman%20abbas.jpeg" 
+                 alt="Zaman Abbas" 
+                 class="img-fluid w-100 h-100" 
+                 style="object-fit:cover; object-position:center;">
+          </div>
+          <div class="p-4">
+            <h5 class="fw-bold mb-1">Zaman Abbas</h5>
+            <p class="text-primary mb-2">Lead Writer & Report Coordinator</p>
+            <p class="small text-muted mb-2">
+              MSc Project Management<br>
+              University of the West of Scotland  B01813465
+            </p>
+            <a href="mailto:zamanabbas253@icloud.com" class="small text-primary text-decoration-none">
+              <i class="bi bi-envelope me-1"></i> zamanabbas253@icloud.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rizwan Javed -->
+      <div class="col-md-6 col-lg-4">
+        <div class="team-card text-center">
+          <div class="overflow-hidden rounded-top" style="height:280px;">
+            <img src="assets/images/rizwan%20javed.jpeg" 
+                 alt="Rizwan Javed" 
+                 class="img-fluid w-100 h-100" 
+                 style="object-fit:cover; object-position:top;">
+          </div>
+          <div class="p-4">
+            <h5 class="fw-bold mb-1">Rizwan Javed</h5>
+            <p class="text-primary mb-2">Project Reviewer & Documentation Lead</p>
+            <p class="small text-muted mb-2">
+              MSc Project Management<br>
+              University of the West of Scotland  B01812535
+            </p>
+            <a href="mailto:rizwan48javed@gmail.com" class="small text-primary text-decoration-none">
+              <i class="bi bi-envelope me-1"></i> rizwan48javed@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shoaib Hassan -->
+      <div class="col-md-6 col-lg-4">
+        <div class="team-card text-center">
+          <div class="overflow-hidden rounded-top" style="height:280px;">
+            <img src="assets/images/shoaib%20hassan.jpeg" 
+                 alt="Shoaib Hassan" 
+                 class="img-fluid w-100 h-100" 
+                 style="object-fit:cover; object-position:center;">
+          </div>
+          <div class="p-4">
+            <h5 class="fw-bold mb-1">Shoaib Hassan</h5>
+            <p class="text-primary mb-2">Technical Lead</p>
+            <p class="small text-muted mb-2">
+              MSc Project Management<br>
+              University of the West of Scotland  B01798980
+            </p>
+            <a href="mailto:Shoaib.hassan232@gmail.com" class="small text-primary text-decoration-none">
+              <i class="bi bi-envelope me-1"></i> Shoaib.hassan232@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- FINAL CTA -->
+<section class="py-5 text-white text-center" style="background:var(--primary);">
+  <div class="container">
+    <h2 class="display-5 mb-4">Ready to get the support you deserve?</h2>
+    <a href="support.html" class="btn btn-light btn-lg px-5">Start Here – Contact Support</a>
+  </div>
+</section>
+
+<!-- FOOTER (same as other pages) -->
+<footer class="py-5 text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><h4>Equal Access Scotland</h4><p>Supporting disabled students across Scottish higher & further education.</p></div>
+      <div class="col-md-6 text-md-end">
+        <p><strong>Emergency:</strong> 999<br><strong>NHS 24:</strong> 111<br><strong>Lead Scotland Helpline:</strong> 0800 999 2568</p>
+      </div>
+    </div>
+    <hr><p class="text-center mb-0">© 2025 Equal Access Scotland – Made with accessibility in mind</p>
+  </div>
+</footer>
+
+<!-- Accessibility Modal -->
+<div class="modal fade" id="accModal">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header"><h5>Accessibility Options</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <div class="modal-body text-center">
+      <button class="btn btn-outline-primary w-100 mb-3" onclick="document.body.style.fontSize='1.4rem'">Large Text</button>
+      <button class="btn btn-outline-primary w-100 mb-3" onclick="document.body.classList.toggle('high-contrast')">High Contrast</button>
+      <button class="btn btn-outline-primary w-100" onclick="document.body.style.filter='grayscale(100%)'">Grayscale</button>
+    </div>
+  </div></div>
 </div>
 
-<footer>
-    <p style="font-size:1.3rem">&copy; 2025 AccessHub Scotland</p>
-    <p>Supporting every disabled student in Scottish universities</p>
-    <p style="margin-top:1rem">
-        <a href="https://www.saas.gov.uk">SAAS</a> • 
-        <a href="https://www.leadscotland.org.uk">Lead Scotland</a> • 
-        <a href="https://www.equalityhumanrights.com">Equality & Human Rights</a>
-    </p>
-</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,176 +1,98 @@
+<!-- === COPY THIS INTO EVERY PAGE (replace the <title> and <body> content only) === -->
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources & Downloads – AccessHub Scotland</title>
-    <meta name="description" content="Free downloadable guides, templates, DSA forms and helpful links.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Crimson+Text:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root{
-            --purple:#6b4e9e;
-            --dark:#1a1a1a;
-            --grey:#555;
-            --light:#f8f9fc;
-            --header:#2d1b4d;
-            --radius:16px;
-        }
-        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-        body{
-            font-family:'Inter',sans-serif;
-            font-size:17px; line-height:1.75; color:var(--dark);
-            background:#fff; padding-top:88px;
-        }
-        h1,h2,h3{font-family:'Crimson Text',serif; color:var(--purple); margin:1.8rem 0 1rem}
-        h1{font-size:2.8rem}
-        h2{font-size:2.2rem}
-        h3{font-size:1.75rem}
-        a{color:var(--purple); text-decoration:none; font-weight:600}
-        a:hover{opacity:0.85}
-
-        header{
-            position:fixed; top:0; left:0; width:100%; background:var(--header);
-            color:#fff; z-index:1000; padding:1rem 0;
-            box-shadow:0 6px 20px rgba(0,0,0,0.15);
-        }
-        nav{max-width:1300px; margin:0 auto; padding:0 2rem; text-align:center}
-        .logo{font-size:2.1rem; font-weight:700; color:#fff}
-        .nav-links a{color:#fff; font-size:1rem; margin:0 1rem; padding:0.6rem 0; display:inline-block}
-        .nav-links a:hover{text-decoration:underline}
-
-        .hero{
-            background:linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%);
-            padding:6rem 2rem; text-align:center;
-        }
-        .hero h1{font-size:3rem; margin-bottom:0.8rem}
-        .hero p{font-size:1.25rem; color:var(--grey); max-width:800px; margin:0 auto}
-
-        .container{max-width:1100px; margin:0 auto; padding:3rem 2rem}
-
-        .grid{
-            display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:2rem; margin:3rem 0
-        }
-        .resource-card{
-            background:#fff; padding:2.2rem; border-radius:var(--radius);
-            box-shadow:0 8px 25px rgba(0,0,0,0.07); transition:0.3s;
-            border-left:6px solid var(--purple);
-        }
-        .resource-card:hover{transform:translateY(-6px); box-shadow:0 15px 40px rgba(0,0,0,0.1)}
-        .resource-card h3{margin-bottom:0.8rem}
-        .resource-card a{
-            display:inline-block; margin-top:1rem; color:var(--purple); font-weight:600
-        }
-        .resource-card a::after{content:" →"}
-
-        .highlight{
-            background:var(--light); padding:3.5rem 2rem; border-radius:var(--radius);
-            text-align:center; margin:4rem 0; box-shadow:0 8px 30px rgba(0,0,0,0.06)
-        }
-
-        footer{
-            background:#111; color:#ccc; padding:4rem 2rem; text-align:center; margin-top:6rem
-        }
-        footer a{color:#ccc}
-
-        @media (max-width:768px){
-            body{font-size:18px}
-            nav{flex-direction:column; text-align:center}
-            .nav-links a{display:block; margin:0.5rem 0}
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Equal Access Scotland</title>
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--primary:#2563eb;--primary-light:#dbeafe;--dark:#1e293b;--light:#f8fafc;--accent:#7c3aed;}
+    body{font-family:'Inter',sans-serif;background:var(--light);color:var(--dark);line-height:1.6;}
+    .navbar{background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);box-shadow:0 4px 30px rgba(0,0,0,0.08);}
+    .hero{background:linear-gradient(rgba(37,99,235,0.92),rgba(124,58,237,0.88)),url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2850&auto=format&fit=crop');background-size:cover;color:white;}
+    .card-hover{transition:all .3s;}.card-hover:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(0,0,0,0.12);}
+    .btn-primary{background:var(--primary);border:none;border-radius:50px;padding:12px 32px;}
+    .accessibility-btn{position:fixed;bottom:24px;right:24px;z-index:9999;background:var(--primary);color:white;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,99,235,0.5);}
+    footer{background:var(--dark);color:#e2e8f0;}
+  </style>
 </head>
 <body>
 
-<header>
-    <nav>
-        <div class="logo">AccessHub Scotland</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="support.html">Support</a>
-            <a href="technologies.html">Technology</a>
-            <a href="campus.html">Campus</a>
-            <a href="awareness.html">Awareness</a>
-            <a href="resources.html">Resources</a>
-            <a href="faq.html">FAQ & Contact</a>
-        </div>
-    </nav>
-</header>
+<!-- Floating Accessibility Button -->
+<button class="accessibility-btn btn btn-lg" data-bs-toggle="modal" data-bs-target="#accModal">
+  <i class="bi bi-universal-access-circle fs-3"></i>
+</button>
 
-<section class="hero">
-    <h1>Resources & Downloads</h1>
-    <p>Free guides, templates, checklists and direct links — everything in one place</p>
-</section>
-
-<div class="highlight">
-    <h2>All downloads & links are completely free</h2>
-    <p style="font-size:1.2rem; margin-top:1rem">Click any card to go straight to the resource</p>
-</div>
-
-<div class="container">
-
-    <h2 style="text-align:center">Official SAAS & Government Resources</h2>
-    <div class="grid">
-        <div class="resource-card">
-            <h3>Apply for DSA (Official SAAS Portal)</h3>
-            <p>Start your Disabled Students' Allowance application</p>
-            <a href="https://www.saas.gov.uk" target="_blank">Go to SAAS DSA Portal →</a>
-        </div>
-        <div class="resource-card">
-            <h3>DSA Information Booklet (PDF)</h3>
-            <p>Full official guide from SAAS for 2025-2026</p>
-            <a href="https://www.saas.gov.uk" target="_blank">Download PDF →</a>
-        </div>
-        <div class="resource-card">
-            <h3>DSA Application Form (PDF)</h3>
-            <p>Printable version if you prefer paper</p>
-            <a href="https://www.saas.gov.uk" target="_blank">Download Form →</a>
-        </div>
+<!-- Navigation (active page highlighted) -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3 text-primary" href="index.html">Equal Access Scotland</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto fw-medium">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+        <li class="nav-item"><a class="nav-link" href="technologies.html">Technologies</a></li>
+        <li class="nav-item"><a class="nav-link" href="campus.html">Campus</a></li>
+        <li class="nav-item"><a class="nav-link" href="awareness.html">Awareness</a></li>
+        <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <h2 style="text-align:center; margin-top:4rem">Help & Advice</h2>
-    <div class="grid">
-        <div class="resource-card">
-            <h3>Lead Scotland – Free Helpline</h3>
-            <p>Expert advice on DSA and university support</p>
-            <a href="https://www.leadscotland.org.uk" target="_blank">Visit Lead Scotland →</a>
-        </div>
-        <div class="resource-card">
-            <h3>Disability Rights UK – Student Hub</h3>
-            <p>Guides, templates and student stories</p>
-            <a href="https://www.disabilityrightsuk.org" target="_blank">Visit Disability Rights UK →</a>
-        </div>
-        <div class="resource-card">
-            <h3>Equality & Human Rights Commission Scotland</h3>
-            <p>Your legal rights as a disabled student</p>
-            <a href="https://www.equalityhumanrights.com" target="_blank">Visit EHRC Scotland →</a>
-        </div>
+<!-- Page-specific content starts below --><!-- Shared header -->
+<div class="container py-5">
+  <h1 class="display-4 text-center mb-5">Resource Library</h1>
+  <div class="row g-4">
+    <div class="col-md-4"><div class="card shadow card-hover text-center p-4">
+      <i class="bi bi-file-earmark-pdf fs-1 text-danger"></i>
+      <h5 class="mt-3">DSA Guide (SAAS)</h5>
+      <a href="https://www.saas.gov.uk/sites/default/files/dsa_guide.pdf" target="_blank" class="btn btn-outline-primary">Download</a>
+    </div></div>
+    <div class="col-md-4"><div class="card shadow card-hover text-center p-4">
+      <i class="bi bi-check-square fs-1 text-success"></i>
+      <h5 class="mt-3">Reasonable Adjustments Checklist</h5>
+      <a href="#" class="btn btn-outline-primary">Download</a>
+    </div></div>
+    <div class="col-md-4"><div class="card shadow card-hover text-center p-4">
+      <i class="bi bi-link-45deg fs-1 text-primary"></i>
+      <h5 class="mt-3">Scottish Disability Organisations</h5>
+      <a href="https://disabilityscotland.org.uk" target="_blank" class="btn btn-outline-primary">Directory →</a>
+    </div></div>
+  </div>
+</div><footer class="py-5 text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><h4>Equal Access Scotland</h4><p>Supporting disabled students across Scottish higher & further education.</p></div>
+      <div class="col-md-6 text-md-end">
+        <p><strong>Emergency:</strong> 999<br>
+           <strong>NHS 24:</strong> 111<br>
+           <strong>Lead Scotland:</strong> 0800 999 2568</p>
+      </div>
     </div>
-
-    <h2 style="text-align:center; margin-top:4rem">Quick Templates & Tools</h2>
-    <div class="grid">
-        <div class="resource-card">
-            <h3>GP Medical Evidence Form (PDF)</h3>
-            <p>Official SAAS form for your doctor to complete</p>
-            <a href="https://www.saas.gov.uk" target="_blank">Download PDF →</a>
-        </div>
-        <div class="resource-card">
-            <h3>Needs Assessment Preparation Guide</h3>
-            <p>What to expect and how to get the most support</p>
-            <a href="https://www.disabilityrightsuk.org" target="_blank">Read Guide →</a>
-        </div>
-    </div>
-
-</div>
-
-<footer>
-    <p style="font-size:1.1rem">&copy; 2025 AccessHub Scotland</p>
-    <p>Supporting every disabled student in Scottish universities</p>
-    <p style="margin-top:1rem">
-        <a href="https://www.saas.gov.uk">SAAS</a> • 
-        <a href="https://www.leadscotland.org.uk">Lead Scotland</a> • 
-        <a href="https://www.equalityhumanrights.com">Equality & Human Rights</a>
-    </p>
+    <hr><p class="text-center mb-0">© 2025 Equal Access Scotland</p>
+  </div>
 </footer>
-</body>
-</html>
+
+<!-- Accessibility Modal -->
+<div class="modal fade" id="accModal">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header"><h5>Accessibility Options</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+    <div class="modal-body text-center">
+      <button class="btn btn-outline-primary w-100 mb-3" onclick="document.body.style.fontSize='1.4rem'">Large Text</button>
+      <button class="btn btn-outline-primary w-100 mb-3" onclick="document.body.classList.toggle('high-contrast')">High Contrast</button>
+      <button class="btn btn-outline-primary w-100" onclick="document.body.style.filter='grayscale(100%)'">Grayscale</button>
+    </div>
+  </div></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body></html>

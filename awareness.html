@@ -1,174 +1,187 @@
+<!-- === COPY THIS INTO EVERY PAGE (replace the <title> and <body> content only) === -->
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awareness & Training – AccessHub Scotland</title>
-    <meta name="description" content="Free workshops, ally training and resources to help everyone understand disability in higher education.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Crimson+Text:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root{
-            --purple:#6b4e9e;
-            --dark:#1a1a1a;
-            --grey:#555;
-            --light:#f8f9fc;
-            --header:#2d1b4d;
-            --radius:16px;
-        }
-        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-        body{
-            font-family:'Inter',sans-serif;
-            font-size:17px; line-height:1.75; color:var(--dark);
-            background:#fff; padding-top:88px;
-        }
-        h1,h2,h3{font-family:'Crimson Text',serif; color:var(--purple); margin:1.8rem 0 1rem}
-        h1{font-size:2.8rem}
-        h2{font-size:2.2rem}
-        h3{font-size:1.75rem}
-        a{color:var(--purple); text-decoration:none; font-weight:600}
-        a:hover{opacity:0.85}
-
-        header{
-            position:fixed; top:0; left:0; width:100%; background:var(--header);
-            color:#fff; z-index:1000; padding:1rem 0;
-            box-shadow:0 6px 20px rgba(0,0,0,0.15);
-        }
-        nav{max-width:1300px; margin:0 auto; padding:0 2rem; text-align:center}
-        .logo{font-size:2.1rem; font-weight:700; color:#fff}
-        .nav-links a{color:#fff; font-size:1rem; margin:0 1rem; padding:0.6rem 0; display:inline-block}
-        .nav-links a:hover{text-decoration:underline}
-
-        .hero{
-            background:linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%);
-            padding:6rem 2rem; text-align:center;
-        }
-        .hero h1{font-size:3rem; margin-bottom:0.8rem}
-        .hero p{font-size:1.25rem; color:var(--grey); max-width:800px; margin:0 auto}
-
-        .container{max-width:1100px; margin:0 auto; padding:3rem 2rem}
-
-        .grid{
-            display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:2.5rem; margin:3rem 0
-        }
-        .card{
-            background:#fff; padding:2.4rem; border-radius:var(--radius);
-            box-shadow:0 8px 25px rgba(0,0,0,0.07); transition:0.3s;
-            border-left:5px solid var(--purple);
-            text-align:center;
-        }
-        .card:hover{transform:translateY(-8px); box-shadow:0 15px 40px rgba(0,0,0,0.12)}
-
-        .highlight{
-            background:var(--light); padding:4rem 2rem; border-radius:var(--radius);
-            text-align:center; margin:4rem 0; box-shadow:0 8px 30px rgba(0,0,0,0.06)
-        }
-
-        .btn{
-            display:inline-block; background:var(--purple); color:#fff;
-            padding:1rem 2.2rem; border-radius:50px; font-size:1.1rem; font-weight:600;
-            margin:0.8rem; min-width:260px; box-shadow:0 6px 20px rgba(107,78,158,0.3);
-            transition:all 0.3s
-        }
-        .btn:hover{transform:translateY(-4px); box-shadow:0 12px 30px rgba(107,78,158,0.4)}
-
-        footer{
-            background:#111; color:#ccc; padding:4rem 2rem; text-align:center; margin-top:6rem
-        }
-        footer a{color:#ccc}
-
-        @media (max-width:768px){
-            body{font-size:18px}
-            nav{flex-direction:column; text-align:center}
-            .nav-links a{display:block; margin:0.5rem 0}
-            .btn{display:block; margin:1.5rem auto; width:90%; max-width:320px}
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Equal Access Scotland</title>
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--primary:#2563eb;--primary-light:#dbeafe;--dark:#1e293b;--light:#f8fafc;--accent:#7c3aed;}
+    body{font-family:'Inter',sans-serif;background:var(--light);color:var(--dark);line-height:1.6;}
+    .navbar{background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);box-shadow:0 4px 30px rgba(0,0,0,0.08);}
+    .hero{background:linear-gradient(rgba(37,99,235,0.92),rgba(124,58,237,0.88)),url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2850&auto=format&fit=crop');background-size:cover;color:white;}
+    .card-hover{transition:all .3s;}.card-hover:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(0,0,0,0.12);}
+    .btn-primary{background:var(--primary);border:none;border-radius:50px;padding:12px 32px;}
+    .accessibility-btn{position:fixed;bottom:24px;right:24px;z-index:9999;background:var(--primary);color:white;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,99,235,0.5);}
+    footer{background:var(--dark);color:#e2e8f0;}
+  </style>
 </head>
 <body>
 
-<header>
-    <nav>
-        <div class="logo">AccessHub Scotland</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="support.html">Support</a>
-            <a href="technologies.html">Technology</a>
-            <a href="campus.html">Campus</a>
-            <a href="awareness.html">Awareness</a>
-            <a href="resources.html">Resources</a>
-            <a href="faq.html">FAQ & Contact</a>
-        </div>
-    </nav>
-</header>
+<!-- Floating Accessibility Button -->
+<button class="accessibility-btn btn btn-lg" data-bs-toggle="modal" data-bs-target="#accModal">
+  <i class="bi bi-universal-access-circle fs-3"></i>
+</button>
 
-<section class="hero">
-    <h1>Awareness & Training</h1>
-    <p>Free workshops and resources to help staff and students become better allies</p>
+<!-- Navigation (active page highlighted) -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3 text-primary" href="index.html">Equal Access Scotland</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto fw-medium">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="technologies.html">Technologies</a></li>
+        <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+        <li class="nav-item"><a class="nav-link" href="campus.html">Campus</a></li>
+        <li class="nav-item"><a class="nav-link" href="awareness.html">Awareness</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page-specific content starts below -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="display-4 ">Awareness & Training</h1>
+      <p class="lead fs-4 text-muted">Building a more inclusive Scotland – one campus at a time</p>
+    </div>
+  </div>
 </section>
 
-<div class="highlight">
-    <h2>Inclusion benefits everyone</h2>
-    <p style="font-size:1.2rem; margin-top:1rem; max-width:800px; margin-left:auto; margin-right:auto">
-        When we understand disability, we create a kinder, more welcoming university for all.
-    </p>
-</div>
-
-<div class="container">
-
-    <h2 style="text-align:center">Free Training Sessions</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Disability 101</h3>
-            <p>Perfect introduction for new staff and student reps — what to say, what not to say.</p>
-        </div>
-        <div class="card">
-            <h3>Hidden Disabilities</h3>
-            <p>Understanding ADHD, dyslexia, autism, mental health and chronic illness.</p>
-        </div>
-        <div class="card">
-            <h3>Accessible Teaching</h3>
-            <p>Simple changes lecturers can make to help every student learn better.</p>
-        </div>
-        <div class="card">
-            <h3>Ally Training</h3>
-            <p>How to be a supportive friend or flatmate to disabled students.</p>
-        </div>
+<!-- Hidden Disabilities Sunflower -->
+<section class="py-5 bg-primary-light">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <img src="https://bwiairport.com/wp-content/uploads/2025/05/HDsunflower.webp?v=1666361163" 
+             alt="Hidden Disabilities Sunflower Lanyard" class="img-fluid rounded shadow" style="max-height:420px;">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-4">Hidden Disabilities Sunflower</h2>
+        <p class="fs-5">The Sunflower Lanyard is now recognised across all Scottish universities, airports, train stations and major venues.</p>
+        <p class="text-muted">Wearing one discreetly indicates you may need extra support, patience or understanding – even if your disability isn’t visible.</p>
+        <a href="https://hiddendisabilitiesstore.com" target="_blank" class="btn btn-primary btn-lg mt-3">
+          Get Your Free Sunflower Lanyard →
+        </a>
+      </div>
     </div>
+  </div>
+</section>
 
-    <h2 style="text-align:center; margin-top:4rem">Quick Resources</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Language Guide</h3>
-            <p>Which words are okay and which aren’t — person-first vs identity-first.</p>
+<!-- Awareness Topics Grid -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center display-5 mb-5">Key Awareness Topics</h2>
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow card-hover">
+          <img src="https://cdn.sanity.io/images/3tzzh18d/production/9da20234eab60272916709bb3763ee885c1dc6f5-1200x675.png?auto=format&fit=crop&w=800&q=80" 
+               class="card-img-top" alt="Neurodiversity" style="height:220px; object-fit:cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Neurodiversity</h5>
+            <p class="card-text">Autism • ADHD • Dyslexia • Dyspraxia<br>Strengths-based understanding on campus</p>
+          </div>
         </div>
-        <div class="card">
-            <h3>Accessibility Checklist</h3>
-            <p>For events, presentations and online content.</p>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow card-hover">
+          <img src="https://domf5oio6qrcr.cloudfront.net/medialibrary/14528/3f85b1b1-9dc7-4a90-855c-dc204646e889.jpg?auto=format&fit=crop&w=800&q=80" 
+               class="card-img-top" alt="Mental Health" style="height:220px; object-fit:cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Mental Health</h5>
+            <p class="card-text">Anxiety • Depression • PTSD<br>How to support students in crisis</p>
+          </div>
         </div>
-        <div class="card">
-            <h3>Myth-Busting Posters</h3>
-            <p>Free to download and display around campus.</p>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow card-hover">
+          <img src="https://cenmac.com/wp-content/uploads/2025/07/Sensoryphysical_web-1024x1024.png?auto=format&fit=crop&w=800&q=80" 
+               class="card-img-top" alt="Physical & Sensory" style="height:220px; object-fit:cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Physical & Sensory</h5>
+            <p class="card-text">Mobility • Visual • Hearing<br>Simple etiquette that makes a difference</p>
+          </div>
         </div>
+      </div>
+
     </div>
+  </div>
+</section>
 
-    <div style="text-align:center; margin:5rem 0">
-        <p style="font-size:1.25rem; margin-bottom:1.5rem">
-            Want training or posters for your university?
-        </p>
-        <a href="mailto:hello@accesshub.scot" class="btn">Get in Touch – It’s Free</a>
+<!-- Free Training Sessions -->
+<section class="py-5" style="background:#f8f9ff;">
+  <div class="container">
+    <h2 class="text-center display-5 mb-5">Free Staff & Student Training</h2>
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <ul class="list-group list-group-flush fs-5">
+          <li class="list-group-item py-3">✓ Disability Confidence 101 (30 mins)</li>
+          <li class="list-group-item py-3">✓ Hidden Disabilities & Sunflower Scheme</li>
+          <li class="list-group-item py-3">✓ Inclusive Language & Microaggressions</li>
+          <li class="list-group-item py-3">✓ Supporting Neurodivergent Students</li>
+          <li class="list-group-item py-3">✓ Mental Health First Aid Basics</li>
+        </ul>
+        <div class="mt-4">
+          <a href="mailto:training@equalaccess.scot" class="btn btn-primary btn-lg">
+            Book Free Training for Your Department
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=80" 
+             alt="Training workshop" class="img-fluid rounded shadow" style="max-height:420px;">
+        <p class="mt-3 text-muted fst-italic">All sessions delivered by disabled trainers with lived experience</p>
+      </div>
     </div>
+  </div>
+</section>
 
-</div>
 
-<footer>
-    <p style="font-size:1.1rem">© 2025 AccessHub Scotland</p>
-    <p>Supporting every disabled student in Scottish universities</p>
-    <p style="margin-top:1rem">
-        <a href="https://www.saas.gov.uk">SAAS</a> • 
-        <a href="https://www.leadscotland.org.uk">Lead Scotland</a> • 
-        <a href="https://www.equalityhumanrights.com">Equality & Human Rights</a>
-    </p>
+
+<!-- Final CTA -->
+<section class="py-5 text-white text-center" style="background:var(--primary);">
+  <div class="container">
+    <h2 class="display-5 mb-4">Want to make your campus more inclusive?</h2>
+    <a href="mailto:training@equalaccess.scot" class="btn btn-light btn-lg px-5">Get in Touch – All Training is Free</a>
+  </div>
+</section>
+</div><footer class="py-5 text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><h4>Equal Access Scotland</h4><p>Supporting disabled students across Scottish higher & further education.</p></div>
+      <div class="col-md-6 text-md-end">
+        <p><strong>Emergency:</strong> 999<br>
+           <strong>NHS 24:</strong> 111<br>
+           <strong>Lead Scotland:</strong> 0800 999 2568</p>
+      </div>
+    </div>
+    <hr><p class="text-center mb-0">© 2025 Equal Access Scotland</p>
+  </div>
 </footer>
-</body>
-</html>
+
+<!-- Accessibility Modal -->
+<div class="modal fade" id="accModal">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header"><h5>Accessibility Options</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+    <div class="modal-body text-center">
+      <button class="btn btn-outline-primary w-100 mb-3" onclick="document.body.style.fontSize='1.4rem'">Large Text</button>
+      <button class="btn btn-outline-primary w-100 mb-3" onclick="document.body.classList.toggle('high-contrast')">High Contrast</button>
+      <button class="btn btn-outline-primary w-100" onclick="document.body.style.filter='grayscale(100%)'">Grayscale</button>
+    </div>
+  </div></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body></html>

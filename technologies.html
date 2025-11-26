@@ -1,180 +1,160 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assistive Technology – AccessHub Scotland</title>
-    <meta name="description" content="Free equipment and software you can get through DSA — laptops, screen readers, mind-mapping tools and more.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Crimson+Text:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root{
-            --purple:#6b4e9e;
-            --dark:#1a1a1a;
-            --grey:#555;
-            --light:#f8f9fc;
-            --header:#2d1b4d;
-            --radius:16px;
-        }
-        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-        body{
-            font-family:'Inter',sans-serif;
-            font-size:17px; line-height:1.75; color:var(--dark);
-            background:#fff; padding-top:88px;
-        }
-        h1,h2,h3{font-family:'Crimson Text',serif; color:var(--purple); margin:1.8rem 0 1rem}
-        h1{font-size:2.8rem}
-        h2{font-size:2.2rem}
-        h3{font-size:1.75rem}
-        a{color:var(--purple); text-decoration:none; font-weight:600}
-        a:hover{opacity:0.85}
-
-        header{
-            position:fixed; top:0; left:0; width:100%; background:var(--header);
-            color:#fff; z-index:1000; padding:1rem 0;
-            box-shadow:0 6px 20px rgba(0,0,0,0.15);
-        }
-        nav{max-width:1300px; margin:0 auto; padding:0 2rem; text-align:center}
-        .logo{font-size:2.1rem; font-weight:700; color:#fff}
-        .nav-links a{color:#fff; font-size:1rem; margin:0 1rem; padding:0.6rem 0; display:inline-block}
-        .nav-links a:hover{text-decoration:underline}
-
-        .hero{
-            background:linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%);
-            padding:6rem 2rem; text-align:center;
-        }
-        .hero h1{font-size:3rem; margin-bottom:0.8rem}
-        .hero p{font-size:1.25rem; color:var(--grey); max-width:800px; margin:0 auto}
-
-        .container{max-width:1100px; margin:0 auto; padding:3rem 2rem}
-
-        .quick-actions{
-            background:var(--light); padding:3.5rem 2rem; text-align:center;
-            border-radius:var(--radius); margin:3rem 0; box-shadow:0 8px 30px rgba(0,0,0,0.06)
-        }
-        .btn{
-            display:inline-block; background:var(--purple); color:#fff;
-            padding:1rem 2.2rem; border-radius:50px; font-size:1.1rem; font-weight:600;
-            margin:0.8rem; min-width:240px; box-shadow:0 6px 20px rgba(107,78,158,0.3);
-            transition:all 0.3s
-        }
-        .btn:hover{transform:translateY(-4px); box-shadow:0 12px 30px rgba(107,78,158,0.4)}
-
-        .grid{
-            display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:2rem; margin:3rem 0
-        }
-        .card{
-            background:#fff; padding:2rem; border-radius:var(--radius);
-            box-shadow:0 8px 25px rgba(0,0,0,0.07); transition:0.3s;
-            border-left:5px solid var(--purple);
-        }
-        .card:hover{transform:translateY(-6px); box-shadow:0 15px 40px rgba(0,0,0,0.1)}
-
-        footer{
-            background:#111; color:#ccc; padding:4rem 2rem; text-align:center; margin-top:6rem
-        }
-        footer a{color:#ccc}
-
-        @media (max-width:768px){
-            body{font-size:18px}
-            nav{flex-direction:column; text-align:center}
-            .nav-links a{display:block; margin:0.5rem 0}
-            .btn{display:block; margin:1rem auto; width:90%; max-width:320px}
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assistive Technologies – Equal Access Scotland</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--primary:#2563eb;--primary-light:#dbeafe;--dark:#1e293b;--light:#f8fafc;--accent:#7c3aed;}
+    body{font-family:'Inter',sans-serif;background:var(--light);color:var(--dark);}
+    .navbar{background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);box-shadow:0 4px 30px rgba(0,0,0,0.08);}
+    .card-hover{transition:all .3s;}.card-hover:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(0,0,0,0.12);}
+    .btn-primary{background:var(--primary);border:none;border-radius:50px;padding:12px 32px;}
+    .accessibility-btn{position:fixed;bottom:24px;right:24px;z-index:9999;background:var(--primary);color:white;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,99,235,0.5);}
+    footer{background:var(--dark);color:#e2e8f0;}
+    .tech-card{background:white;border-radius:16px;padding:2rem;text-align:center;height:100%;box-shadow:0 8px 30px rgba(0,0,0,0.08);}
+    .tech-logo{max-height:90px;margin-bottom:1rem;object-fit:contain;}
+  </style>
 </head>
 <body>
 
-<header>
-    <nav>
-        <div class="logo">AccessHub Scotland</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="support.html">Support</a>
-            <a href="technologies.html">Technology</a>
-            <a href="campus.html">Campus</a>
-            <a href="awareness.html">Awareness</a>
-            <a href="resources.html">Resources</a>
-            <a href="faq.html">FAQ & Contact</a>
-        </div>
-    </nav>
-</header>
+<!-- Floating Accessibility Button -->
+<button class="accessibility-btn btn btn-lg" data-bs-toggle="modal" data-bs-target="#accModal">
+  <i class="bi bi-universal-access-circle fs-3"></i>
+</button>
 
-<section class="hero">
-    <h1>Assistive Technology</h1>
-    <p>All the equipment and software you can get for free through DSA — no cost to you</p>
+<!-- Navigation – same as every page -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3 text-primary" href="index.html">Equal Access Scotland</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto fw-medium">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="technologies.html">Technologies</a></li>
+        <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+        <li class="nav-item"><a class="nav-link" href="campus.html">Campus</a></li>
+        <li class="nav-item"><a class="nav-link" href="awareness.html">Awareness</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Title – clean white background (same as homepage) -->
+<section class="py-5 text-center bg-white">
+  <div class="container py-5">
+    <h1 class="display-3  mb-5">Assistive Technologies</h1>
+    <p class="lead fs-3 text-muted">Tools and software that help you study – many funded by Disabled Students’ Allowance (DSA)</p>
+  </div>
 </section>
 
-<div class="quick-actions">
-    <h2>Ready to get your tech?</h2>
-    <a href="support.html" class="btn">Start Your DSA Application</a>
-    <a href="faq.html" class="btn">Common Questions About Tech</a>
+<!-- Technologies Grid -->
+<div class="container py-5">
+  <div class="row row-cols-1 row-cols-md-3 g-5">
+
+    <div class="col"><div class="tech-card card-hover">
+      <img src="https://www.nvaccess.org/wp-content/legacy/images/logo.png" height ="70" class="tech-logo" alt="NVDA">
+      <h4>NVDA Screen Reader</h4>
+      <p class="text-muted">Free, open-source, powerful</p>
+      <a href="https://www.nvaccess.org/download/" target="_blank" class="btn btn-outline-primary btn-sm">Download Free</a>
+    </div></div>
+
+    <div class="col"><div class="tech-card card-hover">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUzQo4K3-n-aZyKUjnQ1gZ5a0IhkE3X9SDtw&s" class="tech-logo" alt="JAWS">
+      <h4>JAWS Professional</h4>
+      <p class="text-muted">Industry-leading screen reader</p>
+      <a href="https://www.freedomscientific.com/products/software/jaws/" target="_blank" class="btn btn-outline-primary btn-sm">Learn more</a>
+    </div></div>
+
+    <div class="col"><div class="tech-card card-hover">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLuJZ6aN3cLTobua3rOnOv0UyWZRzxVOtgSQ&s" class="tech-logo" alt="Dragon">
+      <h4>Dragon NaturallySpeaking</h4>
+      <p class="text-muted">Voice dictation software</p>
+      <a href="https://www.nuance.com/dragon.html" target="_blank" class="btn btn-outline-primary btn-sm">More info</a>
+    </div></div>
+
+    <div class="col"><div class="tech-card card-hover">
+      <img src="https://play-lh.googleusercontent.com/9d4v4SuQO07dg_DooKx2d-auYwe3oT5CT8szgKlXBt8qFEvMtkfpEnBGWGMe_JtgM2U" class="tech-logo" alt="Read&Write">
+      <h4>Read&Write</h4>
+      <p class="text-muted">Text-to-speech & study tools</p>
+      <a href="https://www.texthelp.com/products/read-and-write-education/" target="_blank" class="btn btn-outline-primary btn-sm">Visit site</a>
+    </div></div>
+
+    <div class="col"><div class="tech-card card-hover">
+      <img src="https://neurobox.co.uk/wp-content/uploads/2023/03/ClaroRead-logo-002-e1738682984872.png" height ="50"class="tech-logo"
+       alt="ClaroRead">
+      <h4>ClaroRead</h4>
+      <p class="text-muted">Popular UK alternative</p>
+      <a href="https://www.clarosoftware.com" target="_blank" class="btn btn-outline-primary btn-sm">Visit site</a>
+    </div></div>
+
+    <div class="col"><div class="tech-card card-hover">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVQu5DDwiRyZ0UQ_vXRiA1RaWntFl0oAHGGg&s" height="70" alt="SignVideo">
+      <h4>SignVideo BSL</h4>
+      <p class="text-muted">Live remote BSL interpreting</p>
+      <a href="https://signvideo.co.uk" target="_blank" class="btn btn-outline-primary btn-sm">Book interpreter</a>
+    </div></div>
+
+    <div class="col"><div class="tech-card card-hover">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTdOBb7uNjVGPKKwLDtAakSkjQdoSXve3eGw&s" class="tech-logo" alt="MindView">
+      <h4>MindView</h4>
+      <p class="text-muted">Visual mind-mapping (great for dyslexia)</p>
+      <a href="https://www.mindview.co.uk" target="_blank" class="btn btn-outline-primary btn-sm">More info</a>
+    </div></div>
+
+    <div class="col"><div class="tech-card card-hover">
+      <i class="bi bi-ear-fill fs-1 text-primary mb-3"></i>
+      <h4>Live Captions</h4>
+      <p class="text-muted">Built into Teams, Zoom, Google Meet</p>
+      <a href="https://support.microsoft.com/en-us/windows/use-live-captions-to-better-understand-audio-b52da59c-14b8-4031-aeeb-f6a47e6055df" target="_blank" class="btn btn-outline-primary btn-sm">Guide</a>
+    </div></div>
+
+    <div class="col"><div class="tech-card card-hover">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiDcozWndzRJ2j0PIPdPZMnsNGTTImXwJL5g&s" class="tech-logo" alt="Glean">
+      <h4>Glean (formerly Sonocent)</h4>
+      <p class="text-muted">Lecture recording + smart notes</p>
+      <a href="https://glean.co" target="_blank" class="btn btn-outline-primary btn-sm">Try Glean</a>
+    </div></div>
+
+  </div>
+
+  <!-- Final CTA -->
+  <div class="text-center mt-5 py-5">
+    <p class="lead mb-4">Almost all of these tools can be funded through <strong>Disabled Students’ Allowance</strong></p>
+    <a href="support.html" class="btn btn-primary btn-lg px-5">Apply for DSA Funding</a>
+  </div>
 </div>
 
-<div class="container">
-
-    <h2 style="text-align:center">Most Common DSA-Funded Items</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>High-spec Laptop + Printer</h3>
-            <p>Powerful Windows laptop with extended warranty, plus a colour printer and scanner.</p>
-        </div>
-        <div class="card">
-            <h3>Dragon NaturallySpeaking</h3>
-            <p>Speech-to-text software — dictate essays instead of typing.</p>
-        </div>
-        <div class="card">
-            <h3>MindView or Inspiration</h3>
-            <p>Mind-mapping software to help plan essays and revise.</p>
-        </div>
-        <div class="card">
-            <h3>Read&Write Gold</h3>
-            <p>Text-to-speech, word prediction, study tools and more.</p>
-        </div>
-        <div class="card">
-            <h3>Ergonomic Equipment</h3>
-            <p>Specialist chair, wrist rests, document holder, large monitor.</p>
-        </div>
-        <div class="card">
-            <h3>Noise-Cancelling Headphones</h3>
-            <p>For students with ADHD, autism or sensory issues.</p>
-        </div>
+<!-- Footer – exactly the same as every other page -->
+<footer class="py-5 text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><h4>Equal Access Scotland</h4><p>Supporting disabled students across Scottish higher & further education.</p></div>
+      <div class="col-md-6 text-md-end">
+        <p><strong>Emergency:</strong> 999<br><strong>NHS 24:</strong> 111<br><strong>Lead Scotland Helpline:</strong> 0800 999 2568</p>
+      </div>
     </div>
-
-    <h2 style="text-align:center; margin-top:4rem">You Can Also Get</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Human Support</h3>
-            <p>Note-takers, BSL interpreters, study skills tutors, mentors — all paid for.</p>
-        </div>
-        <div class="card">
-            <h3>Travel Help</h3>
-            <p>Taxi costs if public transport isn’t accessible.</p>
-        </div>
-        <div class="card">
-            <h3>Consumables Allowance</h3>
-            <p>£200+ per year for ink, paper, etc.</p>
-        </div>
-    </div>
-
-    <p style="text-align:center; margin:4rem 0 2rem; font-size:1.2rem">
-        <strong>Worried you won’t get what you need?</strong><br>
-        The Needs Assessment is designed to recommend everything that will help you study.
-    </p>
-    <div style="text-align:center">
-        <a href="support.html" class="btn">How to Apply for DSA →</a>
-    </div>
-
-</div>
-
-<footer>
-    <p style="font-size:1.1rem">&copy; 2025 AccessHub Scotland</p>
-    <p>Supporting every disabled student in Scottish universities</p>
-    <p style="margin-top:1rem">
-        <a href="https://www.saas.gov.uk">SAAS</a> • 
-        <a href="https://www.leadscotland.org.uk">Lead Scotland</a> • 
-        <a href="https://www.equalityhumanrights.com">Equality & Human Rights</a>
-    </p>
+    <hr><p class="text-center mb-0">© 2025 Equal Access Scotland – Made with accessibility in mind</p>
+  </div>
 </footer>
+
+<!-- Accessibility Modal – same on every page -->
+<div class="modal fade" id="accModal">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header"><h5>Accessibility Options</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+    <div class="modal-body text-center">
+      <button class="btn btn-outline-primary w-100 mb-3" onclick="document.body.style.fontSize='1.4rem'">Large Text</button>
+      <button class="btn btn-outline-primary w-100 mb-3" onclick="document.body.classList.toggle('high-contrast')">High Contrast</button>
+      <button class="btn btn-outline-primary w-100" onclick="document.body.style.filter='grayscale(100%)'">Grayscale</button>
+    </div>
+  </div></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

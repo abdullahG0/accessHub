@@ -1,168 +1,103 @@
+<!-- === COPY THIS INTO EVERY PAGE (replace the <title> and <body> content only) === -->
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support & DSA – AccessHub Scotland</title>
-    <meta name="description" content="Simple step-by-step guide to getting Disabled Students’ Allowance and university support.">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root { --purple:#6b4e9e; --dark:#222; --grey:#555; --light:#f9f9f9; --header-bg:#2d1b4d; }
-        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-        body{
-            font-family:'Open Sans',sans-serif;
-            font-size:18px; line-height:1.8; color:var(--dark);
-            background:#ffffff; padding-top:100px;
-        }
-        h1,h2,h3{font-family:'Merriweather',serif; color:var(--purple); margin:2rem 0 1rem}
-        h1{font-size:3rem}
-        h2{font-size:2.4rem}
-        a{color:var(--purple); text-decoration:underline; font-weight:600}
-        a:hover{opacity:0.8}
-
-        header{
-            position:fixed; top:0; left:0; width:100%; 
-            background:var(--header-bg); color:#fff; 
-            z-index:1000; padding:1.2rem 0;
-            box-shadow:0 4px 15px rgba(0,0,0,0.2);
-        }
-        nav{max-width:1300px; margin:0 auto; padding:0 2rem; text-align:center}
-        .logo{font-size:2.4rem; font-weight:700; color:#fff; margin-bottom:0.5rem}
-        .nav-links a{color:#fff; font-size:1.1rem; margin:0 1.2rem; padding:0.5rem 0; display:inline-block; text-decoration:none}
-        .nav-links a:hover{opacity:0.8}
-
-        .hero{background:#fafafa; padding:6rem 2rem; text-align:center; border-bottom:3px solid #eee}
-        .hero h1{font-size:3.2rem; margin-bottom:1rem}
-
-        .container{max-width:1100px; margin:0 auto; padding:4rem 2rem}
-        .steps{margin:4rem 0}
-        .step{
-            background:#fff; padding:2.5rem; margin:2.5rem 0;
-            border-left:8px solid var(--purple); border-radius:8px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.05)
-        }
-        .step h3{font-size:2rem; margin-bottom:1rem}
-        .btn{
-            display:inline-block; background:var(--purple); color:#fff;
-            padding:1.2rem 2.5rem; border-radius:8px; font-size:1.3rem; margin:1.5rem 0;
-            text-decoration:none; font-weight:600
-        }
-        .btn:hover{background:#563d7c}
-        .btn-red{background:#d32f2f}
-        .btn-red:hover{background:#b71c1c}
-
-        .quick-actions{
-            background:var(--light); padding:4rem 2rem; text-align:center; margin:4rem 0; border-radius:12px
-        }
-        .quick-actions .btn{margin:1rem 1.5rem; min-width:300px}
-
-        table{
-            width:100%; border-collapse:collapse; margin:3rem 0;
-            background:#fff; box-shadow:0 4px 15px rgba(0,0,0,0.05); border-radius:8px; overflow:hidden
-        }
-        th{background:var(--purple); color:#fff; padding:1.5rem; text-align:left}
-        td{padding:1.5rem; border-bottom:1px solid #eee}
-        td a{color:var(--purple)}
-
-        footer{
-            background:#222; color:#ddd; padding:4rem 2rem; text-align:center; margin-top:5rem
-        }
-        footer a{color:#ddd}
-
-        @media (max-width:768px){
-            body{font-size:19px}
-            .nav-links a{display:block; margin:0.8rem 0}
-            .quick-actions .btn{display:block; margin:1.5rem auto; width:90%}
-            table,thead,tbody,th,td,tr{display:block}
-            th{display:none}
-            td{border:none; border-bottom:1px solid #eee; position:relative; padding-left:50%}
-            td::before{position:absolute; left:1rem; font-weight:600; content:attr(data-label)}
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Equal Access Scotland</title>
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--primary:#2563eb;--primary-light:#dbeafe;--dark:#1e293b;--light:#f8fafc;--accent:#7c3aed;}
+    body{font-family:'Inter',sans-serif;background:var(--light);color:var(--dark);line-height:1.6;}
+    .navbar{background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);box-shadow:0 4px 30px rgba(0,0,0,0.08);}
+    .hero{background:linear-gradient(rgba(37,99,235,0.92),rgba(124,58,237,0.88)),url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2850&auto=format&fit=crop');background-size:cover;color:white;}
+    .card-hover{transition:all .3s;}.card-hover:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(0,0,0,0.12);}
+    .btn-primary{background:var(--primary);border:none;border-radius:50px;padding:12px 32px;}
+    .accessibility-btn{position:fixed;bottom:24px;right:24px;z-index:9999;background:var(--primary);color:white;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,99,235,0.5);}
+    footer{background:var(--dark);color:#e2e8f0;}
+  </style>
 </head>
 <body>
 
-<header>
-    <nav>
-        <div class="logo">AccessHub Scotland</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="support.html">Support</a>
-            <a href="technologies.html">Technology</a>
-            <a href="campus.html">Campus</a>
-            <a href="awareness.html">Awareness</a>
-            <a href="resources.html">Resources</a>
-            <a href="faq.html">FAQ & Contact</a>
-        </div>
-    </nav>
-</header>
+<!-- Floating Accessibility Button -->
+<button class="accessibility-btn btn btn-lg" data-bs-toggle="modal" data-bs-target="#accModal">
+  <i class="bi bi-universal-access-circle fs-3"></i>
+</button>
 
-<section class="hero">
-    <h1>Get Support & Funding</h1>
-    <p>Simple steps to get Disabled Students’ Allowance (DSA) and help from your university</p>
-</section>
-
-<div class="quick-actions">
-    <h2 style="margin-bottom:2rem; color:var(--purple)">Need Help Right Now?</h2>
-    <a href="https://www.saas.gov.uk/full-time/disabled-students-allowance" class="btn">Apply for DSA Online</a>
-    <a href="resources.html" class="btn">Download All Forms</a>
-    <a href="tel:01312289441" class="btn btn-red">Call Lead Scotland: 0131 228 9441</a>
-</div>
-
-<div class="container">
-
-    <h2>How to Get Support – 4 Easy Steps</h2>
-    <div class="steps">
-
-        <div class="step">
-            <h3>1. Talk to your university disability team</h3>
-            <p>Tell them about your condition (you don’t have to say everything). They will help you start the process and write a letter of support.</p>
-        </div>
-
-        <div class="step">
-            <h3>2. Apply for Disabled Students’ Allowance (DSA)</h3>
-            <p>Fill in the online form on the SAAS website. You need medical evidence (a doctor’s letter or diagnosis is enough).</p>
-            <p><strong>You can apply even before you start university!</strong></p>
-        </div>
-
-        <div class="step">
-            <h3>3. Go to a free Needs Assessment</h3>
-            <p>An assessor will talk to you and recommend what equipment and help you need. You don’t pay for this.</p>
-        </div>
-
-        <div class="step">
-            <h3>4. Get your equipment and support</h3>
-            <p>SAAS pays for everything — laptop, software, mentor, taxi travel, etc. Your university puts exam adjustments in place.</p>
-        </div>
-
+<!-- Navigation (active page highlighted) -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3 text-primary" href="index.html">Equal Access Scotland</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto fw-medium">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="technologies.html">Technologies</a></li>
+        <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+        <li class="nav-item"><a class="nav-link" href="campus.html">Campus</a></li>
+        <li class="nav-item"><a class="nav-link" href="awareness.html">Awareness</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <h2 style="text-align:center">Find Your University Disability Team</h2>
-    <table>
-        <tr><th>University</th><th>Contact</th><th>Email / Phone</th></tr>
-        <tr><td data-label="University">University of Edinburgh</td><td data-label="Contact">Disability Service</td><td data-label="Contact"><a href="mailto:disability.service@ed.ac.uk">disability.service@ed.ac.uk</a> • 0131 650 6826</td></tr>
-        <tr><td data-label="University">University of Glasgow</td><td data-label="Contact">Disability Service</td><td data-label="Contact"><a href="mailto:disability@glasgow.ac.uk">disability@glasgow.ac.uk</a> • 0141 330 5496</td></tr>
-        <tr><td data-label="University">University of Strathclyde</td><td data-label="Contact">Disability & Wellbeing</td><td data-label="Contact"><a href="mailto:disability@strath.ac.uk">disability@strath.ac.uk</a> • 0141 548 3402</td></tr>
-        <tr><td data-label="University">Heriot-Watt University</td><td data-label="Contact">Disability Service</td><td data-label="Contact"><a href="mailto:disability@hw.ac.uk">disability@hw.ac.uk</a> • 0131 451 4465</td></tr>
-        <tr><td data-label="University">University of St Andrews</td><td data-label="Contact">Student Services</td><td data-label="Contact"><a href="mailto:disability@st-andrews.ac.uk">disability@st-andrews.ac.uk</a> • 01334 462020</td></tr>
-    </table>
+<!-- Page-specific content starts below --><!-- Shared header -->
+<div class="container py-5">
+  <h1 class="display-4 text-center mb-5">Support Services</h1>
+  <div class="row g-5">
+    <div class="col-lg-6">
+      <div class="card shadow card-hover h-100">
+        <div class="card-body">
+          <h3>Lead Scotland Helpline</h3>
+          <p class="lead">Free advice for disabled learners in Scotland</p>
+          <p><strong>Freephone:</strong> 0800 999 2568<br>
+             <strong>Text:</strong> 07786 207 207<br>
+             <strong>Email:</strong> info@leadscotland.org.uk</p>
+          <a href="https://www.lead.org.uk/" target="_blank" class="btn btn-primary">Visit Lead Scotland →</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card shadow card-hover h-100">
+        <div class="card-body">
+          <h3>Disabled Students’ Allowance (DSA)</h3>
+          <p>Funding for equipment, software, helpers & travel</p>
+          <a href="https://www.saas.gov.uk/guides/disabled-students-allowance" target="_blank" class="btn btn-primary btn-lg">Apply via SAAS →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><footer class="py-5 text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><h4>Equal Access Scotland</h4><p>Supporting disabled students across Scottish higher & further education.</p></div>
+      <div class="col-md-6 text-md-end">
+        <p><strong>Emergency:</strong> 999<br>
+           <strong>NHS 24:</strong> 111<br>
+           <strong>Lead Scotland:</strong> 0800 999 2568</p>
+      </div>
+    </div>
+    <hr><p class="text-center mb-0">© 2025 Equal Access Scotland</p>
+  </div>
+</footer>
 
-    <p style="text-align:center; margin:3rem 0; font-size:1.2rem">
-        <strong>Can’t find your university?</strong><br>
-        Email us at <a href="mailto:hello@accesshub.scot">hello@accesshub.scot</a> — we’ll help!
-    </p>
-
+<!-- Accessibility Modal -->
+<div class="modal fade" id="accModal">
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header"><h5>Accessibility Options</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+    <div class="modal-body text-center">
+      <button class="btn btn-outline-primary w-100 mb-3" onclick="document.body.style.fontSize='1.4rem'">Large Text</button>
+      <button class="btn btn-outline-primary w-100 mb-3" onclick="document.body.classList.toggle('high-contrast')">High Contrast</button>
+      <button class="btn btn-outline-primary w-100" onclick="document.body.style.filter='grayscale(100%)'">Grayscale</button>
+    </div>
+  </div></div>
 </div>
 
-<footer>
-    <p style="font-size:1.3rem">&copy; 2025 AccessHub Scotland</p>
-    <p>Supporting every disabled student in Scottish universities</p>
-    <p style="margin-top:1rem">
-        <a href="https://www.saas.gov.uk">SAAS</a> • 
-        <a href="https://www.leadscotland.org.uk">Lead Scotland</a> • 
-        <a href="https://www.equalityhumanrights.com">Equality & Human Rights</a>
-    </p>
-</footer>
-</body>
-</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body></html>
