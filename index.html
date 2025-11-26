@@ -8,18 +8,51 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
-    :root{--primary:#2563eb;--primary-light:#dbeafe;--dark:#1e293b;--light:#f8fafc;--accent:#7c3aed;}
-    body{font-family:'Inter',sans-serif;background:var(--light);color:var(--dark);line-height:1.6;}
-    .navbar{background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);box-shadow:0 4px 30px rgba(0,0,0,0.08);}
-    .hero{background:linear-gradient(rgba(37,99,235,0.92),rgba(124,58,237,0.88)),url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2850&auto=format&fit=crop');background-size:cover;color:white;}
-    .card-hover{transition:all .3s;}.card-hover:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(0,0,0,0.12);}
-    .btn-primary{background:var(--primary);border:none;border-radius:50px;padding:12px 32px;}
-    .accessibility-btn{position:fixed;bottom:24px;right:24px;z-index:9999;background:var(--primary);color:white;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,99,235,0.5);}
-    footer{background:var(--dark);color:#e2e8f0;}
-    .stat-card{background:var(--primary-light);border-radius:16px;padding:2rem;text-align:center;}
-    .partner-logo{height:60px;object-fit:contain;filter:grayscale(30%);
-    }
-  </style>
+  :root{
+    --primary:#2563eb;
+    --primary-light:#dbeafe;
+    --dark:#1e293b;
+    --light:#f8fafc;
+    --accent:#7c3aed;
+    --stat-bg:#e0e7ff;     /* New darker stat background */
+  }
+  body{font-family:'Inter',sans-serif;background:var(--light);color:var(--dark);line-height:1.6;}
+  .navbar{background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);box-shadow:0 4px 30px rgba(0,0,0,0.08);}
+  
+  /* DARKER HERO OVERLAY – much more dramatic & readable */
+  .hero{
+    background:linear-gradient(rgba(0,0,0,0.78),rgba(0,0,0,0.82)), /* ← Darkened */
+                url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2850&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    color:white;
+  }
+
+  .card-hover{transition:all .3s;}
+  .card-hover:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(0,0,0,0.12);}
+  .btn-primary{background:var(--primary);border:none;border-radius:50px;padding:12px 32px;}
+  .accessibility-btn{position:fixed;bottom:24px;right:24px;z-index:9999;background:var(--primary);color:white;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,99,235,0.5);}
+  footer{background:var(--dark);color:#e2e8f0;}
+  
+  /* EQUAL & DARKER STATS CARDS */
+  .stat-card{
+    background:var(--stat-bg);
+    border-radius:20px;
+    padding:2.5rem 1.5rem;
+    text-align:center;
+    height:100%;           /* Forces equal height */
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    box-shadow:0 8px 25px rgba(37,99,235,0.12);
+    transition:0.3s;
+  }
+  .stat-card:hover{
+    background:#c7d2fe;
+    transform:translateY(-8px);
+  }
+  .partner-logo{height:60px;object-fit:contain;filter:grayscale(30%);}
+</style>
 </head>
 <body>
 
@@ -36,22 +69,22 @@
         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="technologies.html">Technologies</a></li>
+        <li class="nav-item"><a class="nav-link" href="awareness.html">Awareness</a></li>
         <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
         <li class="nav-item"><a class="nav-link" href="campus.html">Campus</a></li>
-        <li class="nav-item"><a class="nav-link" href="awareness.html">Awareness</a></li>
         <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO – Now much darker & more elegant -->
 <section class="hero py-5 text-center">
   <div class="container py-5">
     <div class="row justify-content-center">
       <div class="col-lg-10">
         <h1 class="display-3 fw-bold mb-4">Inclusion Starts Here</h1>
-        <p class="lead fs-3 mb-5">Your complete guide to disability support, DSA funding, and accessibility in Scottish universities & colleges</p>
+        <p class="lead fs-3 mb-5 opacity-95">Your complete guide to disability support, DSA funding, and accessibility in Scottish universities & colleges</p>
         <a href="support.html" class="btn btn-light btn-lg px-5 me-3">Get Support Now</a>
         <a href="about.html" class="btn btn-outline-light btn-lg px-5">Learn Your Rights</a>
       </div>
@@ -59,22 +92,28 @@
   </div>
 </section>
 
-<!-- QUICK STATS -->
+<!-- QUICK STATS – Equal height + darker premium background -->
 <section class="py-5 bg-white">
   <div class="container">
     <div class="row text-center g-4">
-      <div class="col-md-4"><div class="stat-card">
-        <h3 class="fw-bold text-primary">1 in 5</h3>
-        <p class="fs-5">Scottish students declare a disability</p>
-      </div></div>
-      <div class="col-md-4"><div class="stat-card">
-        <h3 class="fw-bold text-primary">£12,000+</h3>
-        <p class="fs-5">Average DSA award per year</p>
-      </div></div>
-      <div class="col-md-4"><div class="stat-card">
-        <h3 class="fw-bold text-primary">100%</h3>
-        <p class="fs-5">Scottish unis have a legal duty to make reasonable adjustments</p>
-      </div></div>
+      <div class="col-md-4">
+        <div class="stat-card">
+          <h3 class="fw-bold text-primary mb-2">1 in 5</h3>
+          <p class="fs-5 mb-0">Scottish students declare a disability</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-card">
+          <h3 class="fw-bold text-primary mb-2">£12,000+</h3>
+          <p class="fs-5 mb-0">Average DSA award per year</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-card">
+          <h3 class="fw-bold text-primary mb-2">100%</h3>
+          <p class="fs-5 mb-0">Scottish unis have a legal duty to make reasonable adjustments</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
